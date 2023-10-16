@@ -1,0 +1,259 @@
+/* IMPLANTACAO DAS FONTES E RESET DA PAGINA, IMAGENS, ANCORAS E UL */
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Public Sans', sans-serif;
+    ;
+}
+
+
+
+/* CABEÇALHO */
+
+.cabecalho {
+    display: flex;
+    width: 100%;
+    Z-index : 1000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+    background-color: #fff;
+}
+
+
+.navegacao .menu {
+    display: flex;
+    color:#faf8f8;
+}
+
+.navegaçao .menu .item{
+    margin: 15px;
+    color:#faf8f8;
+}
+
+.navegacao .menu .item a {
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.navegacao .menu .item a:hover{
+    background-color: #0e4dfb;
+    text-decoration: none;
+    color: #faf8f8;
+}
+
+.menu li a {
+    color: #070000;
+}
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+}
+
+/* PAINEL MAIN */
+.conteudo-principal .paineis{
+    position: relative;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    Flex-direction: column;
+}
+
+
+.conteudo-principal .paineis .imagem-painel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(110%);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    font-size: 20px;
+}
+
+.frase-abaixo {
+    color: #ffffff; /* Cor do texto */
+    margin-top: 75px; /* Espaço superior para separar da caixa de pesquisa */
+    font-size: 20px; /* Define o tamanho da fonte */
+}
+
+.conteudo-principal .paineis .imagem-painel.projeto1{
+    background-image: url('./img/chuva.jpg');
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar{
+    opacity: 1;
+}
+
+
+.conteudo-principal .paineis .titulo{ /*para que o iBIDEN fique só com a 1° minuscula*/
+    .first-letter-lowcase{
+        text-transform: lowercase;
+    }
+    .first-letter-lowcase::first-letter{
+    text-transform: uppercase;
+    }
+    color: #fff;
+    font-size: calc(2em + 2vw);
+}
+body {
+    text-align: center;
+    margin: 100;
+    padding: 100;
+}
+
+/* Estilizando o conteúdo da caixa de pesquisa */
+.pesquisa {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    margin-top: 20px; /* Adiciona um espaço superior para separar do título */
+}
+
+/* Estilizando a caixa de pesquisa */
+.caixa-pesquisa {
+    width: 550px; /* A largura da caixa de pesquisa */
+    padding: 10px; /* Adiciona algum espaço interno para melhor aparência */
+    border-radius: 15px; /* Adiciona cantos arredondados */
+    border-color: #faf8f8;
+    text-align: center; /*Centraliza o conteúdo da caixa de pesquisa*/
+    font-size: 16px; /* Define o tamanho da fonte */
+}
+
+
+/* Estilizando o botão de pesquisa */
+input[type="submit"] {
+    background-color: #33459e; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    margin-top: 10px; /* Espaço superior para separar da caixa de pesquisa */
+}
+
+/* Estilizando o botão de pesquisa quando o mouse passa sobre ele */
+input[type="submit"]:hover {
+    background-color: #4d97e6; /* Cor de fundo alterada */
+}
+
+/* Estilo para a seção de feedback */
+.feedback {
+    background-image: url('img/clima_mudanças.jpeg'); 
+    margin-top: -100px;
+    background-size: cover;
+    background-position: center;
+    padding: 60px; /* Espaçamento interno para melhor legibilidade */
+    color: #fff; /* Cor do texto na seção */
+    text-align: center; /* Centralizar o conteúdo na seção */
+}
+
+/* Estilo para o título dentro da seção de feedback */
+.feedback .titulo {
+    font-size: 36px; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #fff;
+}
+
+/* Estilo para a frase abaixo do título */
+.feedback .frase-feedback p {
+    font-size: 18px; /* Tamanho da fonte do texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do texto */
+    color: #ffffff
+}
+ /*Botão Feedback*/
+button {
+    background-color: #797c85;
+    margin-top: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative; 
+    z-index: 1; /*para que o botão fique acima dos elementos abaixo */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.background-image {
+    background-image: url('img/clima_mudanças.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.tags, .about{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Defina a largura desejada para cada div */
+    margin-top: 100px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+}
+
+.direitos{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Defina a largura desejada para cada div */
+    margin-top: 100px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    text-transform: capitalize;
+}
+
+.direitos::first-letter {
+    text-transform: lowercase;
+}
+.direitos p {
+    .first-letter-lowcase{
+        text-transform: lowercase;
+    }
+}
+
+.about-button{
+    background-color: transparent;
+    color: #ffffff; /* Cor do texto azul */
+    cursor: pointer;
+    font-size: 20px; /* Tamanho da fonte, ajuste conforme necessário */
+}

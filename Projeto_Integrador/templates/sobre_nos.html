@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/style-sobre-nos.css">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+    <header class="cabecalho">
+        <spam class="titulo">iBIDEN</spam>
+
+        <nav class="navegacao">
+            <ul class="menu">
+                <li class="item"><a href= "{{ url_for('index')}}">Clima&Tempo</a></li>
+                <li class="item"><a href="{{ url_for('geolocalizacao')}}">Geolocalização</a></li>
+                <li class="item"><a href="{{ url_for('buscar_impactos')}}">Impacto Ambiental</a></li>
+                <li class="item"><a href="{{ url_for('index') }}#noticias">Documentários</a></li>
+                <li class="item"><a href="{{ url_for('sobre_nos')}}">Sobre Nós</a></li>
+            </ul>
+        </nav>  
+    </header>
+</head>
+<body>
+    <div class="sobre-nos">
+        <div class="sobre">
+            <h1><br>SOBRE NÓS</h1>
+        </div>
+        <div class="the-future">
+            <h1>THE FUTURE</h1>
+        </div>
+        <div class="conteudo-sobre-nos">
+            <p>Somos um grupo de quatro entusiastas de Ciência de Dados da Fatec de Santana de Parnaíba dedicados a <br>criar uma ferramenta inovadora e poderosa para fornecer informações relevantes sobre o clima, o trânsito<br> e os impactos ambientais em um único local.</p>
+            <p>Estamos comprometidos em contribuir para a conscientização e a tomada de decisões informadas em relação<br>a questões ambientais e de mobilidade urbana.</p>
+        </div>
+        <div class="integrantes">
+            <h1><br>INTEGRANTES</h1>
+        </div>
+        <div class="desenvolvedores">
+            <h1>DESENVOLVEDORES</h1>
+        </div>
+        <div class="icones-nomes">
+            <div>
+                <div class="icone">
+                    <img src="static/img/pessoa.jpeg" alt="">
+                </div>
+                <div class="nome">
+                    <p>Nathalia Viana</p>
+                </div>
+            </div>
+            <div>
+                <div class="icone">
+                    <img src="static/img/pessoa.jpeg" alt="">
+                </div>
+                <div class="nome">
+                    <p>Nayra Alencar</p>
+                </div>
+            </div>
+            <div>
+                <div class="icone">
+                    <img src="static/img/pessoa.jpeg" alt="">
+                </div>
+                <div class="nome">
+                    <p>André Queiroz</p>
+                </div>
+            </div>
+            <div>
+                <div class="icone">
+                    <img src="static/img/pessoa.jpeg" alt="">
+                </div>
+                <div class="nome">
+                    <p>William Lopo</p>
+                </div>
+            </div>
+        </div>
+        <div class="projeto">
+            <h1><br>NOSSO PROJETO</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>O MOTOR DE BUSCA</h1>
+        </div>
+        <div class="explicacao-projeto">
+            <p>Nosso projeto visa criar um motor de busca que agregue informações detalhadas sobre o clima, o trânsito e <br>os impactos ambientais em tempo real, fornecendo uma plataforma única para que os usuários acessem<br>informações cruciais para planejar suas atividades diárias, reduzir o impacto ambiental e promover uma mobilidade<br> urbana mais sustentável.</p>
+            <p>Estamos comprometidos em utilizar nossos conhecimentos em Ciência de Dados para desenvolver uma solução inovadora<br> que tenha um impacto positivo na qualidade de vida das pessoas e na preservação do meio ambiente.</p>
+            <p>Esperamos que nosso motor de busca contribua para um futuro mais sustentável e consciente em relação às questões climáticas e ambientais.</p>
+            <p>Junte-se a nós nesta jornada em direção a um mundo mais verde e informado!</p>
+        </div>
+        <div class="grupo">
+            <h1><br>O GRUPO</h1>
+        </div>
+        <div class="ibiden">
+            <h1>IBIDEN&reg;</h1>
+        </div>
+        <div class="explicacao-grupo">
+            <p>Era uma vez, em uma pequena sala de aula na Fatec de Santana de Parnaíba, quatro mentes inquisitivas<br> se uniram para embarcar em uma jornada de descoberta e criação. Eles eram <strong> André, Nathalia, Nayra e William,</strong><br> jovens estudantes de Ciência de Dados com um desejo ardente de fazer a diferença no mundo.<br><br>Assim nasceu o grupo <strong>iBIDEN</strong> (lê-se AIBAIDEN).</p>
+            <p>O nome "iBIDEN" surgiu em uma conversa de brainstorming. <br:>A ideia surgiu de combinar "inteligência" com "dados" e "inovação",<br> criando o acrônimo iBIDEN. Era apropriado, pois o grupo estava comprometido em usar a inteligência e a inovação para extrair<br> insights valiosos dos dados.</p>
+            <p>O grupo iBIDEN começou sua jornada com um desafio ambicioso:<br>criar um motor de busca que reunisse informações sobre o clima, o trânsito e os impactos ambientais.<br> Eles sabiam que esta era uma tarefa complexa,<br> que exigiria muita pesquisa, codificação e colaboração.</p>
+            <p>Os meses passaram, e o grupo iBIDEN enfrentou desafios e obstáculos, mas nunca desistiu.<br>Eles estudaram, aprenderam e adaptaram-se constantemente, superando cada obstáculo que encontraram. Eles realizaram testes rigorosos e<br> refinaram sua criação até que estivessem satisfeitos com o resultado.</p>
+            <p>E assim, a saga do grupo iBIDEN continua, na trilha da inovação, sempre prontos para enfrentar novos desafios e criar soluções que possam<br>impactar positivamente o mundo.</p>
+            <p><br><br></p>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,215 @@
+/* IMPLANTACAO DAS FONTES E RESET DA PAGINA, IMAGENS, ANCORAS E UL */
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Public Sans', sans-serif;
+    ;
+}
+/* CABEÇALHO */
+
+.navegacao .menu {
+    display: flex;
+    color:#faf8f8;
+}
+
+.navegaçao .menu .item{
+    margin: 15px;
+    color:#faf8f8;
+}
+
+.navegacao .menu .item a {
+    padding: 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.navegacao .menu .item a:hover{
+    background-color: #0e4dfb;
+    text-decoration: none;
+    color: #faf8f8;
+}
+
+.menu li a {
+    color: #070000;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    max-width: 1170px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    scroll-behavior: smooth;
+    margin-bottom: 100px;
+}
+
+
+
+
+/* PAINEL MAIN */
+.conteudo-principal {
+    margin-top: -100px;
+    background: linear-gradient(to bottom, #499eff, #000); /* Degradê de azul escuro */
+    overflow: hidden;
+    position: relative;
+}
+
+
+.conteudo-principal .paineis{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    Flex-direction: column;
+    margin-top: -10px;
+}
+
+
+/* Estilizando o conteúdo da caixa de pesquisa */
+.pesquisa {
+    display: flex;
+    align-items: center; /* Alinhar verticalmente ao centro */
+}
+
+/* Estilizando o conteúdo da caixa de pesquisa */
+.pesquisa {
+    display: flex;
+    align-items: center;
+    margin-top: -80px;
+}
+
+/* Estilizando a caixa de pesquisa */
+.caixa-pesquisa {
+    width: 400px; /* A largura da caixa de pesquisa */
+    padding: 10px; /* Adiciona algum espaço interno para melhor aparência */
+    border-radius: 15px; /* Adiciona cantos arredondados */
+    border-color: #faf8f8;
+    text-align: center; /* Centraliza o conteúdo da caixa de pesquisa */
+    font-size: 16px; /* Define o tamanho da fonte */
+    margin-right: 10px;
+    display: inline-block; /* Alterado para inline-block */
+    margin-top: -50px;
+}
+
+/* Estilizando o botão de pesquisa */
+input[type="submit"] {
+    background-color: #051980; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    display: inline-block; /* Adicionado para alinhar horizontalmente com a caixa de pesquisa */
+}
+
+
+
+/* Estilizando o botão de pesquisa quando o mouse passa sobre ele */
+input[type="submit"]:hover {
+    background-color: #4d97e6; /* Cor de fundo alterada */
+}
+
+
+/*IMAGEM DE DIA E NOITE*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.main-dia {
+    background-image: url('/static/img/clima_dia.jpeg');
+}
+
+.main-noite {
+    background-image: url('/static/img/clima_noite.jpeg');
+}
+
+
+.conteudo-principal {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    transition: background-image 0.5s;
+}
+
+
+h1{
+    font-size: 70px;
+    margin-left: -50px;
+    display: flex;
+    color: #ffffff;
+
+}
+
+h2{
+    font-size: 120px;
+    margin-left: -50px;
+    display: flex;
+    color: #ffffff;
+
+}
+h3{
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+}
+p{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+}
+/*quadrados*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os blocos */
+    margin-top: 10px; /* Espaço entre os containers */
+    margin-left: 90px;
+}
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os blocos */
+    margin-top: 10px; /* Espaço entre os containers */
+    margin-left: 330px;
+}
+
+
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(1, 20, 114, 0.7);
+    margin-left: 20px; /* Centralizar à direita */
+    margin-right: 2px; /* Espaço entre os quadrados à direita */
+    flex: 1; /* Faz com que os blocos .square compartilhem o espaço disponível */
+    border: 1px solid #000; /* Apenas para destacar os blocos para fins de demonstração */
+    padding: 10px;
+    font-size: 10px;
+}
+
+.temperature-and-square {
+    display: flex;
+    flex-direction: column; /* Mude para coluna para empilhar elementos verticalmente */
+    align-items: center; /* Alinhar elementos centralmente */
+}

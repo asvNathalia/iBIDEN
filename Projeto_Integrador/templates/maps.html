@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+    content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/style-maps.css">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMWuLru8440er_C13PcdAen0vjXd3k-C4&callback=initMap"></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <spam class="titulo">iBIDEN</spam>
+        <nav class="navegacao">
+            <ul class="menu">
+                <li class="item"><a href= "{{ url_for('index')}}">Clima&Tempo</a></li>
+                <li class="item"><a href="{{ url_for('geolocalizacao')}}">Geolocalização</a></li>
+                <li class="item"><a href="{{ url_for('buscar_impactos')}}">Impacto Ambiental</a></li>
+                <li class="item"><a href="{{ url_for('index') }}#noticias">Documentários</a></li>
+                <li class="item"><a href="{{ url_for('sobre_nos')}}">Sobre Nós</a></li>
+            </ul>
+        </nav>       
+    </header>
+    <div id="search-box">
+        <input type="text" id="location-input" placeholder="Digite uma localização">
+        <button onclick="searchLocation()">Pesquisar</button>
+    </div>
+    <div id="map"></div>
+    <script>
+        let map;
+        let marker;
+        let trafficLayer;
+        let transitLayer;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -23.5505, lng: -46.6333 }, // Coordenadas iniciais (São Paulo, Brasil)
+                zoom: 12
+            });
+
+            marker = new google.maps.Marker({
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+            });
+
+            // Inicializa a camada de trânsito
+            trafficLayer = new google.maps.TrafficLayer();
+            trafficLayer.setMap(map);
+
+            // Inicializa a camada de transporte público
+            transitLayer = new google.maps.TransitLayer();
+            transitLayer.setMap(map);
+        }
+
+        function searchLocation() {
+            const locationInput = document.getElementById('location-input').value;
+            const geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({ address: locationInput }, (results, status) => {
+                if (status === google.maps.GeocoderStatus.OK && results.length > 0) {
+                    const location = results[0].geometry.location;
+                    map.setCenter(location);
+                    marker.setPosition(location);
+                } else {
+                    alert('Localização não encontrada.');
+                }
+            });
+        }
+    </script>
+
+    <script>
+        window.onload = function () {
+            initMap();
+        };
+    </script>
+</body>
+</html>

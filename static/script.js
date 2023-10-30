@@ -1,3 +1,4 @@
+/*MAPA DE CALOR*/
 const options = {
     key: 'XBRUBIYWAgEfw9jep7gk7p7vshfRtZ8m', // SUBSTITUA PELA SUA PRÓPRIA CHAVE !!!
 

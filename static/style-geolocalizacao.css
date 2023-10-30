@@ -70,7 +70,6 @@ body {
     margin: 0 auto;
     flex-wrap: wrap;
     scroll-behavior: smooth;
-    margin-bottom: 100px;
 }
 
 /* PAINEL MAIN */
@@ -97,11 +96,16 @@ body {
     transition: 0.5s ease-in-out;
     font-size: 20px;
     margin-top: -200px;
+    margin:0;
+    padding: 0;
 }
 
 .conteudo-principal .paineis .imagem-painel.projeto1{
     background-image: url('./img/mapa.jpg');
-    margin-bottom: 0px;
+}
+.imagem-painel {
+    margin: 0;
+    padding: 0;
 }
 
 .conteudo-principal .paineis .imagem-painel.mostrar{
@@ -118,7 +122,7 @@ body {
     }
     color: #fff;
     font-size: 60px;
-    margin-top: -250px;
+    margin-top: -50px;
 }
 
 .frase-abaixo {
@@ -132,6 +136,7 @@ body {
     margin: 100;
     padding: 100;
 }
+
 
 
 /* Estilizando o botão de pesquisa */
@@ -150,20 +155,6 @@ button[type="submit"] {
     width: 120px;
 
 }
-
-.pesquisa {
-    display: inline-block;
-    width: 48%;
-    margin-right: 2%;
-    text-align: center;
-}
-
-.submit-button {
-    background-color: transparent;
-    border: none;
-    padding: 0;
-}
-
 
 
 .button-icon{

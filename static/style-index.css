@@ -22,17 +22,22 @@ body {
     font-family: 'Public Sans', sans-serif;
     ;
 }
+
+
+
 /* CABEÇALHO */
 
 .cabecalho {
     display: flex;
+    width: 100%;
+    Z-index : 1000;
     justify-content: space-between;
     align-items: center;
     padding: 25px 0;
     max-width: 1170px;
-    margin: 0 auto;
     flex-wrap: wrap;
     scroll-behavior: smooth;
+    background-color: #fff;
 }
 
 
@@ -61,6 +66,7 @@ body {
     color: #070000;
 }
 
+
 .cabecalho {
     display: flex;
     justify-content: space-between;
@@ -70,21 +76,20 @@ body {
     margin: 0 auto;
     flex-wrap: wrap;
     scroll-behavior: smooth;
-    margin-bottom: 100px;
 }
 
-
 /* PAINEL MAIN */
-.pesquisa-impactos .pesquisa{
+.conteudo-principal .paineis{
     position: relative;
     height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-top: -100px;
+    Flex-direction: column;
 }
-.pesquisa-impactos .pesquisa .imagem-search{
+
+
+.conteudo-principal .paineis .imagem-painel{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center ;
@@ -96,86 +101,51 @@ body {
     opacity: 0;
     transition: 0.5s ease-in-out;
     font-size: 20px;
-        flex-direction: column;
 }
-.pesquisa-impactos .pesquisa .imagem-search.projeto2{
-    background-image: url('./img/impacto_ambiental.jpeg');
+
+.frase-abaixo {
+    color: #ffffff; /* Cor do texto */
+    margin-top: 75px; /* Espaço superior para separar da caixa de pesquisa */
+    font-size: 20px; /* Define o tamanho da fonte */
 }
-.pesquisa-impactos .pesquisa .imagem-search.mostrar{
+
+.conteudo-principal .paineis .imagem-painel.projeto1{
+    background-image: url('./img/chuva.jpg');
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar{
     opacity: 1;
 }
-.pesquisa-impactos .pesquisa .titulo{ /*para que o iBIDEN fique só com a 1° minuscula*/
-    .first-letter-lowcase {
+
+
+.conteudo-principal .paineis .titulo{ /*para que o iBIDEN fique só com a 1° minuscula*/
+    .first-letter-lowcase{
         text-transform: lowercase;
     }
     .first-letter-lowcase::first-letter{
     text-transform: uppercase;
     }
+    color: #fff;
     font-size: calc(2em + 2vw);
-    margin-top: 180px;  
-    font-weight: bold;
-    margin-bottom: 1px;
-    color: floralwhite; 
-    background-image: linear-gradient(to bottom, #ff0000, #ff8c00, #ff0000);
-    background-clip: text;
-    -webkit-background-clip: text;      
-    animation: fire 1s infinite alternate;
-    text-shadow: 
-    0 0 10px #ff0000, 0 0 10px #ff0000,
-    0 0 20px #ff8000, 0 0 20px #ff8000,
-    0 0 30px #ff0000, 0 0 30px #ff0000;
 }
-
-
-@keyframes fire {
-    0% {
-        text-shadow: 
-            0 0 60px #ff0000, 0 0 20px #ff0000,
-            0 0 40px #ff8000, 0 0 40px #ff8000,
-            0 0 60px #ff0000, 0 0 60px #ff0000;
-    }
-    100% {
-        text-shadow: 
-            0 0 10px #ff0000, 0 0 10px #ff0000,
-            0 0 20px #ff8000, 0 0 20px #ff8000,
-            0 0 30px #ff0000, 0 0 30px #ff0000;
-    }
-}
-
-.pesquisa-impactos .pesquisa p { 
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 1px;
-    color: rgb(255, 255, 255);
-    background-image: linear-gradient(to bottom, #e7d2d2, #ffffff, #f8f5f5);
-    background-clip: text;
-    -webkit-background-clip: text;
-    text-shadow: 1px 2px 10px rgba(10, 10, 10, 0.7); /* Altere a cor aqui */
-}
-
-
-
-/*CAIXA DE PESQUISA*/
-
-
-/* Estilizando o conteúdo da caixa de pesquisa */
-.body {
+body {
     text-align: center;
     margin: 100;
     padding: 100;
 }
+
+/* Estilizando o conteúdo da caixa de pesquisa */
 .pesquisa {
     text-align: center; /* Centraliza o conteúdo horizontalmente */
-    margin-top: 1px; /* Adiciona um espaço superior para separar do título */
+    margin-top: 20px; /* Adiciona um espaço superior para separar do título */
 }
 
 /* Estilizando a caixa de pesquisa */
 .caixa-pesquisa {
-    width: 600px; /* A largura da caixa de pesquisa */
+    width: 550px; /* A largura da caixa de pesquisa */
     padding: 10px; /* Adiciona algum espaço interno para melhor aparência */
     border-radius: 15px; /* Adiciona cantos arredondados */
-    border-color: #040404;
-    margin-top: -10px;
+    border-color: #faf8f8;
     text-align: center; /*Centraliza o conteúdo da caixa de pesquisa*/
     font-size: 16px; /* Define o tamanho da fonte */
 }
@@ -183,7 +153,7 @@ body {
 
 /* Estilizando o botão de pesquisa */
 input[type="submit"] {
-    background-color: #221c19; /* Cor de fundo do botão */
+    background-color: #33459e; /* Cor de fundo do botão */
     color: #fff; /* Cor do texto do botão */
     border: none; /* Remove a borda do botão */
     padding: 10px 20px; /* Espaçamento interno do botão */
@@ -195,64 +165,116 @@ input[type="submit"] {
 
 /* Estilizando o botão de pesquisa quando o mouse passa sobre ele */
 input[type="submit"]:hover {
-    background-color: #e97126; /* Cor de fundo alterada */
+    background-color: #4d97e6; /* Cor de fundo alterada */
 }
 
-/*descanso informativo*/
+/*noticias ibiden*/
+.titulo-noticias{
+    margin-top: 60px;
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #a2a2a2;
+}
 
-/* Estilos para o container das imagens */
-.image-container {
+h2{
+    font-size: 20px;    
+}
+
+/*Estilo para os slides da noticia*/
+.noticias{
+    margin: 0 auto;
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+}
+
+.cinema-ibiden{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/destruicao_do_ambiente.jpe');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.slides-noticias{
+    width: 400%;
+    height: 400px;
     display: flex;
-    align-items: flex-end;
-    align-items: center;
+    
+}
+.slides-noticias input{
+    display: none;
+}
+.slide {
+    width: 30%;
+    position: relative;
+    border-radius: 20px;
+    transition: 2s;
 }
 
-/* Estilos para as imagens */
-.image-caption {
-    text-align: center;
-    margin: 0 20px;
-    align-items: center;
+.slide img{
+    width: 800px;
+    border-radius: 20px;
 }
 
-.acompanhe,
-.saiba,
-.noticias {
-    width: 300px;
-    height: auto;
+.manual-navigation{
+    position: absolute;
+    width: 800px;
     margin-top: 30px;
+    display: flex;
     justify-content: center;
 }
 
-
-/* Estilos para as legendas */
-.image-caption p {
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 15px;
-    text-align:unset;
-    color: #070000;
-    text-decoration: underline;
+.manual-btn{
+    border: 2px solid #060505;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
 }
 
-
-/* Estilo para centralizar o texto embaixo de cada imagem */
-.image-container {
-    text-align: center;
-    margin: 20px;
-    justify-content: center;
-    color: #070000;
+.manual-btn:not(:last-child){
+    margin-right: 10px;
 }
 
-.image-caption {
-    font-weight: bold;
-    margin-top: 5px;
+.manual-btn:hover{
+    background-color: #6df977;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+#radio5:checked ~ .first{
+    margin-left: -100%;
+}
+
+#radio6:checked ~ .first{
+    margin-left: -125%;
+}
+
+#radio7:checked ~ .first{
+    margin-left: -150%;
+}
+
+#radio8:checked ~ .first{
+    margin-left: -175%;
 }
 
 
 /* Estilo para a seção de feedback */
 .feedback {
     background-image: url('img/clima_mudanças.jpeg'); 
-    margin-top: 100px;
+    margin-top: -100px;
     background-size: cover;
     background-position: center;
     padding: 60px; /* Espaçamento interno para melhor legibilidade */
@@ -292,18 +314,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-.background-image {
-    background-image: url('img/clima_mudanças.jpeg');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-.direitos, .tags, .about{
+.tags, .about{
     display: inline-block;
     vertical-align: top;
     width: 30%; /* Defina a largura desejada para cada div */
@@ -311,10 +322,29 @@ button:hover {
     margin-left: 10px; 
     margin-right: 10px; 
 }
+
+.direitos{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Defina a largura desejada para cada div */
+    margin-top: 100px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    text-transform: capitalize;
+}
+
+.direitos::first-letter {
+    text-transform: lowercase;
+}
+.direitos p {
+    .first-letter-lowcase{
+        text-transform: lowercase;
+    }
+}
+
 .about-button{
     background-color: transparent;
     color: #ffffff; /* Cor do texto azul */
     cursor: pointer;
     font-size: 20px; /* Tamanho da fonte, ajuste conforme necessário */
 }
-

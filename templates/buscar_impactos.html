@@ -43,19 +43,25 @@
         <section class="descanso">
             <div class="image-container">
                 <div class="image-caption">
-                    <img class="acompanhe" src="static/img/acompanhe_em_tempo_real.jpeg" alt="documentario">
+                    <a href="{{ url_for('index')}}">
+                        <img class="acompanhe" src="static/img/acompanhe_em_tempo_real.jpeg" alt="documentario">
+                    </a>
                     <a href="{{ url_for('index')}}">
                         <p>Acompanhe em tempo real as principais<br> tendências sobre Clima&Tempo</p>
                     </a>
                 </div>
                 <div class="image-caption">
-                    <img class="saiba" src="static/img/noticias_palma_mão.jpeg" alt="saiba-mais">
+                    <a href="{{ url_for('buscar_impactos')}}">
+                         <img class="saiba" src="static/img/noticias_palma_mão.jpeg" alt="saiba-mais">
+                    </a>
                     <a href="{{ url_for('buscar_impactos')}}">
                         <p>Acesse as principais noticias sobre os<br> Impactos Ambientais na palma da sua mão</p>
                     </a>
                 </div>
                 <div class="image-caption">
-                    <img class="noticias" src="static/img/clima_geolocalização.jpeg">
+                    <a href="{{ url_for('geolocalizacao')}}">
+                        <img class="noticias" src="static/img/clima_geolocalização.jpeg">
+                    </a>
                     <a href="{{ url_for('geolocalizacao')}}">
                         <p>Todas as informações sobre o Clima&Tempo<br> na sua região a um clique de distância</p>
                     </a>

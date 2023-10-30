@@ -7,7 +7,7 @@
     <meta name="description"
         content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="static/style-pagina-principal.css">
+    <link rel="stylesheet" href="static/style-index.css">
     <title>iBIDEN</title>
     <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
 </head>
@@ -43,11 +43,11 @@
         </section>
     </main>
     
-    <main class="noticias-ibiden" id="noticias">
+    <main class="cinema-ibiden" id="noticias">
         <section class="noticias">
             <div class = "titulo-noticias"> 
                 <h1>Cinema iBIDEN<br></h1>
-                <h2>Navegue por Documentários Ambientais que Transformam Visões em Ações</h2>
+                <h2>Navegue por Documentários Ambientais que transformam Visões em Ações</h2>
                 <p><br></p>
             </div>
             <div class = "slides-noticias"> 
@@ -127,7 +127,6 @@
             <div class= "frase-feedback">
                 <p>Compartilhe sua opinião e ajude-nos a aprimorar sua experiência aqui no IBIDEN. <br>Valorizamos suas sugestões para oferecer um serviço melhor.<br><br>Clique no botão abaixo e deixe seu feedback</p>
             </div>
-            <div class="imagem-feedback"></div>
             <a href="https://forms.office.com/r/QtLVnv3ueg" target="_blank">
                 <div class="feedback-button">
                     <button>FEEDBACK</button>
@@ -153,4 +152,22 @@
                         
         </section>
     </main>
-</body>
+    <script>
+        let count = 1;
+        document.getElementById("radio1").checked = true;
+    
+        setInterval(function(){
+            nextImage();
+        }, 3000);
+    
+        function nextImage() {
+            count++;
+            if (count > 8) {
+                count = 1;
+            }
+
+            document.getElementById("radio" + count).checked = true;
+        }
+    </script>
+    </body>
+</html>

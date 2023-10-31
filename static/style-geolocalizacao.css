@@ -61,6 +61,13 @@ body {
     color: #070000;
 }
 
+.imagem-ao-lado-do-titulo {
+    width: 30px; /* Defina a largura desejada */
+    height: auto; /* Isso manterá a proporção da imagem */
+    margin-right: 5px; /* Espaçamento à direita para separar a imagem do título */    
+    vertical-align: middle; /* Alinhar verticalmente ao meio */
+}
+
 .cabecalho {
     display: flex;
     justify-content: space-between;
@@ -189,4 +196,134 @@ button[type="submit"]:hover {
 .mapContainer{
     width: 100%; 
     height: 400px;
+}
+
+
+/*descanso informativo*/
+
+/* Estilos para o container das imagens */
+.image-container {
+    display: flex;
+    align-items: flex-end;
+    align-items: center;
+}
+
+/* Estilos para as imagens */
+.image-caption {
+    text-align: center;
+    margin: 0 20px;
+    align-items: center;
+}
+
+.acompanhe,
+.saiba,
+.noticias {
+    width: 300px;
+    height: auto;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+
+/* Estilos para as legendas */
+.image-caption p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align:unset;
+    color: #070000;
+    text-decoration: underline;
+}
+
+
+/* Estilo para centralizar o texto embaixo de cada imagem */
+.image-container {
+    text-align: center;
+    margin: 20px;
+    justify-content: center;
+    color: #070000;
+}
+
+.image-caption {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+/* Estilo para a seção de feedback */
+.feedback {
+    background-image: url('img/clima_mudanças.jpeg'); 
+    margin-top: 80px;
+    background-size: cover;
+    background-position: center;
+    padding: 60px; /* Espaçamento interno para melhor legibilidade */
+    color: #fff; /* Cor do texto na seção */
+    text-align: center; /* Centralizar o conteúdo na seção */
+}
+
+/* Estilo para o título dentro da seção de feedback */
+.feedback .titulo {
+    font-size: 36px; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #fff;
+}
+
+/* Estilo para a frase abaixo do título */
+.feedback .frase-feedback p {
+    font-size: 18px; /* Tamanho da fonte do texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do texto */
+    color: #ffffff
+}
+ /*Botão Feedback*/
+button {
+    background-color: #279100;
+    margin-top: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative; 
+    z-index: 1; /*para que o botão fique acima dos elementos abaixo */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.tags, .about{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Defina a largura desejada para cada div */
+    margin-top: 100px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+}
+
+.direitos{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Defina a largura desejada para cada div */
+    margin-top: 100px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    text-transform: capitalize;
+}
+
+.direitos::first-letter {
+    text-transform: lowercase;
+}
+.direitos p {
+    .first-letter-lowcase{
+        text-transform: lowercase;
+    }
+}
+
+.about-button{
+    background-color: transparent;
+    color: #ffffff; /* Cor do texto azul */
+    cursor: pointer;
+    font-size: 20px; /* Tamanho da fonte, ajuste conforme necessário */
 }

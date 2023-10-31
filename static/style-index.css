@@ -66,6 +66,13 @@ body {
     color: #070000;
 }
 
+.imagem-ao-lado-do-titulo {
+    width: 30px; /* Defina a largura desejada */
+    height: auto; /* Isso manterá a proporção da imagem */
+    margin-right: 5px; /* Espaçamento à direita para separar a imagem do título */    
+    vertical-align: middle; /* Alinhar verticalmente ao meio */
+}
+  
 
 .cabecalho {
     display: flex;
@@ -207,7 +214,7 @@ h2{
     width: 30%;
     position: relative;
     border-radius: 20px;
-    transition: 2s;
+    transition: 3s;
 }
 
 .slide img{
@@ -297,7 +304,7 @@ h2{
 }
  /*Botão Feedback*/
 button {
-    background-color: #797c85;
+    background-color: #279100;
     margin-top: 20px;
     color: #fff;
     padding: 10px 20px;

@@ -73,6 +73,12 @@ body {
     margin-bottom: 100px;
 }
 
+.imagem-ao-lado-do-titulo {
+    width: 30px; /* Defina a largura desejada */
+    height: auto; /* Isso manterá a proporção da imagem */
+    margin-right: 5px; /* Espaçamento à direita para separar a imagem do título */    
+    vertical-align: middle; /* Alinhar verticalmente ao meio */
+}
 
 /* PAINEL MAIN */
 .pesquisa-impactos .pesquisa{
@@ -275,7 +281,7 @@ input[type="submit"]:hover {
 }
  /*Botão Feedback*/
 button {
-    background-color: #797c85;
+    background-color: #279100;
     margin-top: 20px;
     color: #fff;
     padding: 10px 20px;

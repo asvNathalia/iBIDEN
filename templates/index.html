@@ -13,18 +13,21 @@
 </head>
 <body>
     <header class="cabecalho">
-        <a href= "{{ url_for('index')}}"
-             <spam class="titulo">iBIDEN</spam>
-        </a>
-        <nav class="navegacao">
+        <a href="{{ url_for('index') }}">
+            <img src="static/img/nuvem_dourada.png" alt="Descrição da imagem" class="imagem-ao-lado-do-titulo">
+            <span class="titulo">iBIDEN</span>
+          </a>
+          
+          <nav class="navegacao">
             <ul class="menu">
                 <li class="item"><a href= "{{ url_for('index')}}">Clima&Tempo</a></li>
                 <li class="item"><a href="{{ url_for('geolocalizacao')}}">Geolocalização</a></li>
                 <li class="item"><a href="{{ url_for('buscar_impactos')}}">Impacto Ambiental</a></li>
                 <li class="item"><a href="{{ url_for('index') }}#noticias">Documentários</a></li>
+                <li class="item"><a href="{{ url_for('manual')}}">Manual</a></li>
                 <li class="item"><a href="{{ url_for('sobre_nos')}}">Sobre Nós</a></li>
             </ul>
-        </nav>      
+        </nav>       
     </header>
     <main class="conteudo-principal" id="projetos">
         <section class="paineis">
@@ -47,7 +50,7 @@
         <section class="noticias">
             <div class = "titulo-noticias"> 
                 <h1>Cinema iBIDEN<br></h1>
-                <h2>Navegue por Documentários Ambientais que transformam Visões em Ações</h2>
+                <h2>Sugestões de Documentários Ambientais que transformam Visões em Ações</h2>
                 <p><br></p>
             </div>
             <div class = "slides-noticias"> 
@@ -148,17 +151,17 @@
                         <button><p>Sobre nós</p></button>
                     </div>
                 </a>
-            </section>
-                        
+            </section>                        
         </section>
     </main>
+    <!--Script para que os slides dos documentários passem sozinhos-->
     <script>
         let count = 1;
         document.getElementById("radio1").checked = true;
     
         setInterval(function(){
             nextImage();
-        }, 3000);
+        }, 7000);
     
         function nextImage() {
             count++;

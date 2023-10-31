@@ -213,6 +213,9 @@ def maps():
 def maps_calor():
     return render_template('maps_calor.html')
 
+@app.route ('/manual')
+def manual():
+    return render_template('manual.html')
 
 if __name__ == '__main__':
     app.run(debug=True)   

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/style-manual.css">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="{{ url_for('index') }}">
+            <img src="static/img/nuvem_dourada.png" alt="Descrição da imagem" class="imagem-ao-lado-do-titulo">
+            <span class="titulo">iBIDEN</span>
+        </a>
+
+        <nav class="navegacao">
+            <ul class="menu">
+                <li class="item"><a href= "{{ url_for('index')}}">Clima&Tempo</a></li>
+                <li class="item"><a href="{{ url_for('geolocalizacao')}}">Geolocalização</a></li>
+                <li class="item"><a href="{{ url_for('buscar_impactos')}}">Impacto Ambiental</a></li>
+                <li class="item"><a href="{{ url_for('index') }}#noticias">Documentários</a></li>
+                <li class="item"><a href="{{ url_for('manual')}}">Manual</a></li>
+                <li class="item"><a href="{{ url_for('sobre_nos')}}">Sobre Nós</a></li>
+            </ul>
+        </nav>  
+    </header>
+</head>
+
+<body>
+    <div class="manual">
+        <div class="manual_titulo">
+            <h1><br>MANUAL</h1>
+        </div>
+        <div class="manual_subtitulo">
+            <h1>AQUI VOCÊ ENCONTRA O GUIA DA FERRAMENTA</h1>
+        </div>
+        <div class="conteudo">
+            <p>Para que a ferramenta iBIDEN pudesse oferecer recursos relacionados com o Clima&Tempo e seu Impacto Ambiental, foi feito o uso de linguagens de programação e integração com APIs,   que você pode ter acesso a mais informações nessa seção<br>
+
+                <br>Para a construção da página WEB foi utilizado a linguagem de marcação de hipertexto HTML (HyperText Markup Language) para criar e estruturar conteúdo acerca das questões que giram em torno deste estudo. Ela foi fundamental para especificar a estrutura e o formato dos elementos da página, como textos, imagens, links e outros elementos interativos presentes na plataforma.<br>
+
+                <br>Além disso, também foi feito o uso do CSS (Cascading Style Sheets) que é uma tecnologia essencial que complementa o HTML na construção de páginas da web. O CSS pode ser definido como uma linguagem de estilo que separa a apresentação e o layout do conteúdo. Ele permitiu que fossem criadas regras de estilo para controlar a aparência visual dos elementos HTML, como cores, fontes, espaçamentos, tamanhos e posicionamento dos elementos presentes na plataforma. O CSS foi fundamental para a personalização e a estilização das páginas web, tornando-as visualmente atraentes e funcionais para os usuários.<br>
+
+                <br>Em relação à parte lógica da estrutura do motor de busca, foi realizada a ligação na API do Google para que ele fosse capaz de retornar os resultados das buscas feitas pelos usuários, levando em consideração os parâmetros de busca de resultados em português que contivessem as palavras chaves:  “Mudanças Climáticas", "Efeito Estufa", "Impacto Ambiental" e  "Aquecimento Global”.<br>
+                Isso permitiu que o mecanismo de busca aproveitasse a enorme base de dados do Google para buscar informações relevantes em tempo real, alinhando-se com os parâmetros de busca definidos.  Para tanto, foi utilizada a linguagem de programação Javascript que desempenhou um papel crucial nesse processo.<br>
+
+                <br>JavaScript é uma linguagem versátil e amplamente suportada que é executada diretamente no navegador do usuário. Isso possibilitou a criação de uma experiência de busca interativa e responsiva, que permite aos usuários inserir suas consultas, ver os resultados e interagir com as informações de maneira fluida.<br>
+
+                <br>A integração da API do Google e o uso da linguagem de programação JavaScript desempenharam um papel crucial na criação de um motor de busca eficaz e amigável, que fornece aos usuários acesso rápido e preciso às informações desejadas sobre temas ambientais críticos.<br>
+                
+                <br>Portanto, a partir das ferramentas supracitadas aplicadas à construção de um motor de busca focado no sistema meteorológico e os impactos ambientais e suas consequências climáticas, foi possível criar um motor de busca de impactos ambientais que não apenas rastreie e identifique esses impactos e as torne acessíveis a todos os públicos.
+
+                <br>O acesso à informação desempenha um papel fundamental na resolução de problemas, proporcionando uma base sólida para a tomada de decisões fundamentadas em dados concretos, reais e atualizados, o que, por sua vez, gera incentivos para a implementação de soluções sustentáveis.<br>
+                
+                <br>Com base nisso, foi realizada a confecção de um motor de busca, como pode ser observado na Figura 1, sendo esta a  primeira interface disponível denominada "Clima&Tempo", na qual o usuário tem a capacidade de inserir dados relacionados à cidade de interesse, com o objetivo de obter informações detalhadas sobre as condições meteorológicas locais.
+                </p>
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 1 - PÁGINA PRINCIAL</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>MOTOR DE BUSCA CLIMA&TEMPO</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/pagina_principal.JPG" alt="">
+        </div>
+        <div class="explicacao-projeto">
+            Ao realizar essa consulta, o usuário será redirecionado para a próxima etapa do sistema, o resultado de sua busca.<br>
+            Essa possui como finalidade principal é fornecer informações em tempo real sobre parâmetros climáticos, tais como velocidade do vento, radiação solar, precipitação e umidade do ar, em relação à temperatura. Todos esses dados serão disponibilizados instantaneamente após a realização da pesquisa, como pode ser observado na Figura 2.
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 2 - RESULTADO CLIMA&TEMPO</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>CLIMA&TEMPO</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/resultado_clima.jpg" alt="">
+        </div>
+        <div class="explicacao-grupo">
+            Adicionalmente, nossa plataforma será equipada com um sistema de geolocalização que permitirá ao usuário acessar informações relevantes relacionadas ao clima, trânsito, transporte público e um mapa de calor da região de interesse.<br>
+            Para isso, é disponibilizado duas opções de Mapas com informações distintas para melhor forner informações ao usuário. Dentro da aba “Geolocalização”, será possível ter acesso a interface de de escolha, como demonstrado na Figura 3.
+            
+        <div class="figura">
+            <h1><br>FIGURA 2 - RESULTADO CLIMA&TEMPO</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>CLIMA&TEMPO</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/resultado_clima.jpg" alt="">
+        </div>
+
+
+        
+
+            <p>Para explorar em detalhes nossos projetos e conquistas, convidamos você a acessar nosso repositório no DRIVE:</p>
+            <a href="https://drive.google.com/drive/folders/1zkKcSYbd0H_eSWS6A_OJkLBvmjpDVNVT?usp=share_link" target="_blank">
+                <button><p><br>Desenvolvimentos iBIDEN</p></button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

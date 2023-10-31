@@ -72,6 +72,12 @@ body {
     scroll-behavior: smooth;
 }
 
+.imagem-ao-lado-do-titulo {
+    width: 30px; /* Defina a largura desejada */
+    height: auto; /* Isso manterá a proporção da imagem */
+    margin-right: 5px; /* Espaçamento à direita para separar a imagem do título */    
+    vertical-align: middle; /* Alinhar verticalmente ao meio */
+}
 
 /*Estilo da pesquisa*/
 .pesquisa {

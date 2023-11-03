@@ -132,9 +132,6 @@ body {
     background-attachment: fixed; /* Mantém a imagem fixa no fundo */
 }
 
-p {
-    margin-bottom: 20px; /* Defina a quantidade de espaço desejada */
-}
 
 /*titulos em branco brilhante*/
 .manual_titulo{
@@ -161,23 +158,14 @@ p {
     border: 5px solid #5BE6FF; /* Define uma borda vermelha de 10px */
 }
 
-.projetos_passados{
-    font-size: 15px;
-    color: white;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
+
 
 /*titulos em azul brilhante*/
-.manual_subtitulo, .motor-de-busca,.desenvolvedores{
+.manual_subtitulo, .motor-de-busca{
     font-size: 10px;
     color: #5BE6FF;
     text-shadow: 0 0 10px rgba(16, 41, 229, 0.8);
     margin-left: 30px;
-}
-.heranca{
-    font-size: 10px;
-    color: #5BE6FF;
-    text-shadow: 0 0 10px rgba(16, 41, 229, 0.8);
 }
 .ibiden {
     font-size: 20px;
@@ -192,9 +180,29 @@ p {
 }
 
 /*conteudos e explicação*/
-.conteudo, .explicacao-projeto, .explicacao-grupo{
-    margin-top: 70px;
+.conteudo{
+    margin-top: 20px;
     color: #faf8f8;
     margin-left: 30px;
     margin-right: 200px;
+}
+button {
+    background-color: #255cff;
+    margin-top: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative; 
+    z-index: 1; /*para que o botão fique acima dos elementos abaixo */
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3); /* Sombra para dar um efeito de brilho */
 }

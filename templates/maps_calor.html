@@ -5,6 +5,7 @@
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
     <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
     <link rel="stylesheet" href="static/style-maps-calor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>iBIDEN</title>
     <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
 
@@ -26,11 +27,54 @@
             </ul>
         </nav>     
     </header>
+    <div class="container">
+        <div class="tooltip" onclick="toggleTooltip(this)">
+          <span class="tooltiptext">
+            <div>
+              <span> <li>Legenda sobre temperatura em graus celsios, velocidade do vento e pressão em hPa, encontrada na parte inferior do mapa.
+              </li></span>
+              <br>
+              <span> <li> Tipo de mapa pode ser selecionado no ícone à direita, bom como nível de altitude da superfície.</span>
+              </li> </div>
+          </span>      
+      
+          <i class="fas fa-info-circle icon"></i>
+        </div>
+    </div>
+      
     <input type="text" id="locationInput" placeholder="Digite o local desejado">
     <button type="submit" id="searchButton">Pesquisar</button>
     <div id="windy"></div>
+    <main class="conteudo-final">
+        <section class="feedback">
+            <h1 class="titulo">Gostaríamos de saber a sua perspectiva</h1>
+            <div class= "frase-feedback">
+                <p>Compartilhe sua opinião e ajude-nos a aprimorar sua experiência aqui no IBIDEN. <br>Valorizamos suas sugestões para oferecer um serviço melhor.<br><br>Clique no botão abaixo e deixe seu feedback</p>
+            </div>
+            <a href="https://forms.office.com/r/QtLVnv3ueg" target="_blank">
+                <div class="feedback-button">
+                    <button>FEEDBACK</button>
+                </div>
+            </a>
+            <section>
+                <div class="direitos">
+                    <h1>IBIDEN&reg;</h1>
+                    <p><br>&copy; 2023.<br>All rights reserved.</p>
+                </div>
+                <div class="tags">
+                    <h1>TAGS</h1>
+                    <p><br>mudanças climáticas   •   news<br>  •   previsão em tempo real</p>
+                </div>
+                <div class="about">
+                    <h1>ABOUT</h1>
+                <a href="{{ url_for('sobre_nos')}}">
+                    <div class="about-button">
+                        <button><p>Sobre nós</p></button>
+                    </div>
+                </a>
+            </section>                        
+        </section>
+    </main>
     <script src="static/script.js"></script>
 </body>
 </html>
-
-

@@ -34,7 +34,70 @@
         <input type="text" id="location-input" placeholder="Digite uma localização">
         <button onclick="searchLocation()">Pesquisar</button>
     </div>
+    <div class="container">
+        <div class="tooltip" onclick="toggleTooltip(this)">
+          <span class="tooltiptext">
+            <div class="line green">
+              <span></span> Trânsito leve - Velocidade média está acima de 80km/h 
+            </div>
+            <div class="line yellow">
+              <span></span> Trânsito moderado - Velocidade média entre 40 e 80 km/h 
+            </div>
+            <div class="line red">
+              <span></span> Trânsito intenso - Velocidade média abaixo de 40km/h 
+            </div>
+            <div class="line dar">
+              <span></span> Trânsito parado naquele trecho da via 
+            </div>
+            <div class="line der">
+              <span></span>  Estrada bloqueada
+            </div>
+            <div class="line acidente">
+              <span></span>Acidente
+            </div>
+            <div class="line via">
+              <span></span>ViaMobilidade - Trem/Metrô
+            </div>
+            <div class="line CPTM">
+              <span></span>CPTM - Trem
+            </div>
+          </span>
+      
+      
+          <i class="fas fa-info-circle icon"></i>
+        </div>
+      </div>
     <div id="map"></div>
+    <main class="conteudo-final">
+        <section class="feedback">
+            <h1 class="titulo">Gostaríamos de saber a sua perspectiva</h1>
+            <div class= "frase-feedback">
+                <p>Compartilhe sua opinião e ajude-nos a aprimorar sua experiência aqui no IBIDEN. <br>Valorizamos suas sugestões para oferecer um serviço melhor.<br><br>Clique no botão abaixo e deixe seu feedback</p>
+            </div>
+            <a href="https://forms.office.com/r/QtLVnv3ueg" target="_blank">
+                <div class="feedback-button">
+                    <button>FEEDBACK</button>
+                </div>
+            </a>
+            <section>
+                <div class="direitos">
+                    <h1>IBIDEN&reg;</h1>
+                    <p><br>&copy; 2023.<br>All rights reserved.</p>
+                </div>
+                <div class="tags">
+                    <h1>TAGS</h1>
+                    <p><br>mudanças climáticas   •   news<br>  •   previsão em tempo real</p>
+                </div>
+                <div class="about">
+                    <h1>ABOUT</h1>
+                <a href="{{ url_for('sobre_nos')}}">
+                    <div class="about-button">
+                        <button><p>Sobre nós</p></button>
+                    </div>
+                </a>
+            </section>                        
+        </section>
+    </main>
     <script>
         let map;
         let marker;
@@ -83,5 +146,14 @@
             initMap();
         };
     </script>
+
+
+
+    <script>
+    function toggleTooltip(element) {
+        element.classList.toggle('active');
+    }
+    </script>
+
 </body>
 </html>

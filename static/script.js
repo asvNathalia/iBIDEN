@@ -1,4 +1,9 @@
 /*MAPA DE CALOR*/
+
+function toggleTooltip(element) {
+    element.classList.toggle('active');
+}
+
 const options = {
     key: 'XBRUBIYWAgEfw9jep7gk7p7vshfRtZ8m', // SUBSTITUA PELA SUA PRÓPRIA CHAVE !!!
 
@@ -8,6 +13,7 @@ const options = {
     hourFormat: '12h',
     // ...etc
 };
+
 
 windyInit(options, windyAPI => {
     const { map, picker, utils, broadcast, storer  } = windyAPI;

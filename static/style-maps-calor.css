@@ -107,7 +107,7 @@ button[type="submit"] {
     border-radius: 5px; /* Cantos arredondados do botão */
     cursor: pointer; /* Cursor de mão ao passar o mouse sobre o botão */
     font-size: 16px; /* Tamanho da fonte do botão */
-    margin-top: 10px; /* Espaço superior para separar da caixa de pesquisa */
+    margin-top: 0; /* Espaço superior para separar da caixa de pesquisa */
 }
 
 /* Estilizando o botão de pesquisa quando o mouse passa sobre ele */
@@ -121,4 +121,143 @@ button[type="submit"]:hover {
     width: 100%;
     height: 450px;
     margin-top: 10px;
+}
+
+
+/*Estilo para info*/
+
+.container {
+    float: right;
+    margin-right: 100px;
+    margin-top: 25px;
+}
+  
+.tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: rgb(233, 232, 232);
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 40px;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+  }
+
+.tooltip.active .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+
+  }
+
+.tooltip .line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.tooltip .line::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    margin-right: 10px;
+}
+
+  
+.tooltip .line i {
+    margin-right: 10px;
+}
+
+
+
+
+/* Estilo para a seção de feedback */
+.feedback {
+    background-image: url('img/clima_mudanças.jpeg'); 
+    margin-top: 80px;
+    background-size: cover;
+    background-position: center;
+    padding: 60px; /* Espaçamento interno para melhor legibilidade */
+    color: #fff; /* Cor do texto na seção */
+    text-align: center; /* Centralizar o conteúdo na seção */
+}
+
+/* Estilo para o título dentro da seção de feedback */
+.feedback .titulo {
+    font-size: 36px; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #fff;
+}
+
+/* Estilo para a frase abaixo do título */
+.feedback .frase-feedback p {
+    font-size: 18px; /* Tamanho da fonte do texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do texto */
+    color: #ffffff
+}
+ /*Botão Feedback*/
+button {
+    background-color: #279100;
+    margin-top: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative; 
+    z-index: 1; /*para que o botão fique acima dos elementos abaixo */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.tags, .about{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Defina a largura desejada para cada div */
+    margin-top: 100px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+}
+
+.direitos{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Defina a largura desejada para cada div */
+    margin-top: 100px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    text-transform: capitalize;
+}
+
+.direitos::first-letter {
+    text-transform: lowercase;
+}
+.direitos p {
+    .first-letter-lowcase{
+        text-transform: lowercase;
+    }
+}
+
+.about-button{
+    background-color: transparent;
+    color: #ffffff; /* Cor do texto azul */
+    cursor: pointer;
+    font-size: 20px; /* Tamanho da fonte, ajuste conforme necessário */
 }

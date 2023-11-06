@@ -38,6 +38,7 @@ body {
 .navegacao .menu {
     display: flex;
     color:#faf8f8;
+    list-style-type: none;
 }
 
 .navegaçao .menu .item{
@@ -58,6 +59,7 @@ body {
 
 .menu li a {
     color: #070000;
+    list-style-type: none;
 }
 
 

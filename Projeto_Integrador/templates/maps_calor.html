@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+    <link rel="stylesheet" href="static/style-maps-calor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="{{ url_for('index') }}">
+            <img src="static/img/nuvem_dourada.png" alt="Descrição da imagem" class="imagem-ao-lado-do-titulo">
+            <span class="titulo">iBIDEN</span>
+        </a>
+        <nav class="navegacao">
+            <ul class="menu">
+                <li class="item"><a href= "{{ url_for('index')}}">Clima&Tempo</a></li>
+                <li class="item"><a href="{{ url_for('geolocalizacao')}}">Geolocalização</a></li>
+                <li class="item"><a href="{{ url_for('buscar_impactos')}}">Impacto Ambiental</a></li>
+                <li class="item"><a href="{{ url_for('index') }}#noticias">Documentários</a></li>
+                <li class="item"><a href="{{ url_for('manual')}}">Manual</a></li>
+                <li class="item"><a href="{{ url_for('sobre_nos')}}">Sobre Nós</a></li>
+            </ul>
+        </nav>     
+    </header>
+    <div class="container">
+        <div class="tooltip" onclick="toggleTooltip(this)">
+          <span class="tooltiptext">
+            <div>
+              <span> <li>Este mapa oferece informação visual sobre Temperatura em °C, Pressão em hPa e Velocidade do Vento. A descrição de cada mapa pode ser encontradas na parte inferior do mapa.
+              </li></span>
+              <br>
+              <span> <li> O tipo de mapa pode ser selecionado no ícone à direita, bem como a altitude desejada.</span>
+              </li> </div>
+          </span>      
+      
+          <i class="fas fa-info-circle icon"></i>
+        </div>
+    </div>
+      
+    <input type="text" id="locationInput" placeholder="Digite o país desejado">
+    <button type="submit" id="searchButton">Pesquisar</button>
+    <div id="windy"></div>
+    <main class="conteudo-final">
+        <section class="feedback">
+            <h1 class="titulo">Gostaríamos de saber a sua perspectiva</h1>
+            <div class= "frase-feedback">
+                <p>Compartilhe sua opinião e ajude-nos a aprimorar sua experiência aqui no IBIDEN. <br>Valorizamos suas sugestões para oferecer um serviço melhor.<br><br>Clique no botão abaixo e deixe seu feedback</p>
+            </div>
+            <a href="https://forms.office.com/r/QtLVnv3ueg" target="_blank">
+                <div class="feedback-button">
+                    <button>FEEDBACK</button>
+                </div>
+            </a>
+            <section>
+                <div class="direitos">
+                    <h1>IBIDEN&reg;</h1>
+                    <p><br>&copy; 2023.<br>All rights reserved.</p>
+                </div>
+                <div class="tags">
+                    <h1>TAGS</h1>
+                    <p><br>mudanças climáticas   •   news<br>  •   previsão em tempo real</p>
+                </div>
+                <div class="about">
+                    <h1>ABOUT</h1>
+                <a href="{{ url_for('sobre_nos')}}">
+                    <div class="about-button">
+                        <button><p>Sobre nós</p></button>
+                    </div>
+                </a>
+            </section>                        
+        </section>
+    </main>
+    <script src="static/script.js"></script>
+</body>
+</html>

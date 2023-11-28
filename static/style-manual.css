@@ -148,6 +148,15 @@ body {
     margin-left: 30px;
 }
 
+.imagem-celular{
+    margin-top: 10px;
+    width: 308px; /* Defina o tamanho desejado */
+    height: 580px; /* Defina o tamanho desejado */
+    border-radius: 0%; /* Torna a imagem quadrada */
+    overflow: hidden; /* Garante que a imagem seja cortada corretamente para um círculo */
+    margin-left: 25px;
+    border: 5px solid #5BE6FF; /* Define uma borda vermelha de 10px */
+}
 .imagens{
     margin-top: 10px;
     width: 800px; /* Defina o tamanho desejado */

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+    <link rel="stylesheet" href="static/style-maps-calor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+
+</head>
+<body>
+    <body>
+        <header class="cabecalho" id="header">
+    
+            <a href="#" class="logo">
+               <img src="../static/img/nuvem_dourada.png" alt="" class="logo">
+            </a>
+        
+         <nav class="navegacao-opcoes-menu">
+            <ul class="items-menu">
+                <li class="item"><a href= "{{ url_for('busca_clima')}}">Home</a></li>
+                <li class="item"><a href="{{ url_for('dengueinsight') }}">Dengue Insight</a></li>
+                <li class="item"><a href= "{{ url_for('buscar_impactos')}}">EcoDengue</a></li>
+                <li class="item"><a href= "{{ url_for('dashboard')}}">Dengue PBI</a></li>
+                <li class="item"><a href= "{{ url_for('manual')}}">Help</a></li>
+                <li class="item"><a href= "{{ url_for('sobre_nos')}}">About</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu-container">
+            <img src="static/img/icone_usuario.png" alt="User Icon" class="user-icon">
+
+            <div class="user-menu">
+                <a href="{{ url_for('gerenciar_conta') }}">Gerenciar sua Conta</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div> 
+    </header>   
+    </header>
+    <div class="container">
+        <div class="tooltip" onclick="toggleTooltip(this)">
+          <span class="tooltiptext">
+            <div>
+              <span> <li>Este mapa oferece informação visual sobre Temperatura em °C, Pressão em hPa e Velocidade do Vento. A descrição de cada mapa pode ser encontradas na parte inferior do mapa.
+              </li></span>
+              <br>
+              <span> <li> O tipo de mapa pode ser selecionado no ícone à direita, bem como a altitude desejada.</span>
+              </li> </div>
+          </span>      
+      
+          <i class="fas fa-info-circle icon"></i>
+        </div>
+    </div>
+      
+
+    <div id="windy"></div>
+    
+    <main class="conteudo-final">
+        <section class="feedback">
+            <h1 class="titulo">Gostaríamos de saber a sua perspectiva</h1>
+            <div class= "frase-feedback">
+                <p>Compartilhe sua opinião e ajude-nos a aprimorar sua experiência aqui no IBIDEN. <br>Valorizamos suas sugestões para oferecer um serviço melhor.<br><br>Clique no botão abaixo e deixe seu feedback</p>
+            </div>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=veJyzyt6g0e96znVewf3bxP3XRBkcHFFkSY_Y_rmpwxUMDcxV1FQVklHQkVaUktUSzAzSUhRV1EzUC4u" target="_blank">
+                <div class="feedback-button">
+                    <button>FEEDBACK</button>
+                </div>
+            </a>
+            <section>
+                <div class="direitos">
+                    <h1>IBIDEN&reg;</h1>
+                    <p><br>&copy; 2024<br>All rights reserved.</p>
+                </div>
+                <div class="tags">
+                    <h1>TAGS</h1>
+                    <p><br>mudanças climáticas   •   news<br>  •   previsão em tempo real</p>
+                </div>
+                <div class="about">
+                    <h1>ABOUT</h1>
+                <a href="{{ url_for('sobre_nos')}}">
+                    <div class="about-button">
+                        <button><p>Sobre nós</p></button>
+                    </div>
+                </a>
+            </section>                        
+        </section>
+    </main>
+    <script src="static/script.js"></script>
+</body>
+</html>

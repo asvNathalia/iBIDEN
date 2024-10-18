@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_49f1cda19276c384101025a33a150d64 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_49f1cda19276c384101025a33a150d64" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_49f1cda19276c384101025a33a150d64 = L.map(
+                "map_49f1cda19276c384101025a33a150d64",
+                {
+                    center: [-15.788497, -47.879873],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7d9fad47f3d7f92d2720bfcc9816cc2e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_7d9fad47f3d7f92d2720bfcc9816cc2e.addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var marker_da018ca3d1ccd4cb567af2fabd7693ba = L.marker(
+                [-9.97499, -67.8248977],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_cb10a7a20a11993e524603aafc86c587 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_da018ca3d1ccd4cb567af2fabd7693ba.setIcon(icon_cb10a7a20a11993e524603aafc86c587);
+        
+    
+        var popup_57a8f890a6747c38a9d04d94fbd84c04 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43a3c8b39852c6595f169c0d287d0c09 = $(`<div id="html_43a3c8b39852c6595f169c0d287d0c09" style="width: 100.0%; height: 100.0%;">Rio Branco: 8570 casos</div>`)[0];
+                popup_57a8f890a6747c38a9d04d94fbd84c04.setContent(html_43a3c8b39852c6595f169c0d287d0c09);
+            
+        
+
+        marker_da018ca3d1ccd4cb567af2fabd7693ba.bindPopup(popup_57a8f890a6747c38a9d04d94fbd84c04)
+        ;
+
+        
+    
+    
+            var marker_8634fca7b0d9e6d902e72ac697b06467 = L.marker(
+                [-9.6498487, -35.7292318],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_5c9a27a4b0d1688a72d4a1c515c65cbf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8634fca7b0d9e6d902e72ac697b06467.setIcon(icon_5c9a27a4b0d1688a72d4a1c515c65cbf);
+        
+    
+        var popup_6450a7c72fd4f869a075cb079111e89f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_40e67fec6e0cd2ae72853ee6a3f1d957 = $(`<div id="html_40e67fec6e0cd2ae72853ee6a3f1d957" style="width: 100.0%; height: 100.0%;">Maceió: 2362 casos</div>`)[0];
+                popup_6450a7c72fd4f869a075cb079111e89f.setContent(html_40e67fec6e0cd2ae72853ee6a3f1d957);
+            
+        
+
+        marker_8634fca7b0d9e6d902e72ac697b06467.bindPopup(popup_6450a7c72fd4f869a075cb079111e89f)
+        ;
+
+        
+    
+    
+            var marker_36c1038b499b2bebcde1b629765f0286 = L.marker(
+                [0.034934, -51.0663888],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_ffdcdf673d763953836647a0c815d087 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_36c1038b499b2bebcde1b629765f0286.setIcon(icon_ffdcdf673d763953836647a0c815d087);
+        
+    
+        var popup_cf508aa2835121a293d1203558341888 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e42d0e028316dae4f53488b32919761f = $(`<div id="html_e42d0e028316dae4f53488b32919761f" style="width: 100.0%; height: 100.0%;">Macapá: 1992 casos</div>`)[0];
+                popup_cf508aa2835121a293d1203558341888.setContent(html_e42d0e028316dae4f53488b32919761f);
+            
+        
+
+        marker_36c1038b499b2bebcde1b629765f0286.bindPopup(popup_cf508aa2835121a293d1203558341888)
+        ;
+
+        
+    
+    
+            var marker_1b22340cfae57e4074c9c2344be41b7f = L.marker(
+                [-3.1190275, -60.0217314],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_ba16d3964e13e384e66ec72e09543aa3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1b22340cfae57e4074c9c2344be41b7f.setIcon(icon_ba16d3964e13e384e66ec72e09543aa3);
+        
+    
+        var popup_1870446752d0bb88083ff7277efdc26f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af11a7b34eb7ff0dda46906188f010ea = $(`<div id="html_af11a7b34eb7ff0dda46906188f010ea" style="width: 100.0%; height: 100.0%;">Manaus: 8672 casos</div>`)[0];
+                popup_1870446752d0bb88083ff7277efdc26f.setContent(html_af11a7b34eb7ff0dda46906188f010ea);
+            
+        
+
+        marker_1b22340cfae57e4074c9c2344be41b7f.bindPopup(popup_1870446752d0bb88083ff7277efdc26f)
+        ;
+
+        
+    
+    
+            var marker_128c564ff1a40e4eac1512bdec2c078d = L.marker(
+                [-12.9714, -38.5014171],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_d9235e3e03e407d4aa9e0575060db0db = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_128c564ff1a40e4eac1512bdec2c078d.setIcon(icon_d9235e3e03e407d4aa9e0575060db0db);
+        
+    
+        var popup_74ff3f92780c68af8b2c1aa995b494fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cfa635f1b50344a47511f2c89368454e = $(`<div id="html_cfa635f1b50344a47511f2c89368454e" style="width: 100.0%; height: 100.0%;">Salvador: 10361 casos</div>`)[0];
+                popup_74ff3f92780c68af8b2c1aa995b494fb.setContent(html_cfa635f1b50344a47511f2c89368454e);
+            
+        
+
+        marker_128c564ff1a40e4eac1512bdec2c078d.bindPopup(popup_74ff3f92780c68af8b2c1aa995b494fb)
+        ;
+
+        
+    
+    
+            var marker_d6e25a8d689ed539b3de5b24e60e1af6 = L.marker(
+                [-3.7172, -38.5266704],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_481805b5cc00d7811923127baaa6a40b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d6e25a8d689ed539b3de5b24e60e1af6.setIcon(icon_481805b5cc00d7811923127baaa6a40b);
+        
+    
+        var popup_8584328d9e33d58c6f0c864161fadb21 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e4c31a14030081b1ca5b7371d96c20e = $(`<div id="html_2e4c31a14030081b1ca5b7371d96c20e" style="width: 100.0%; height: 100.0%;">Fortaleza: 5820 casos</div>`)[0];
+                popup_8584328d9e33d58c6f0c864161fadb21.setContent(html_2e4c31a14030081b1ca5b7371d96c20e);
+            
+        
+
+        marker_d6e25a8d689ed539b3de5b24e60e1af6.bindPopup(popup_8584328d9e33d58c6f0c864161fadb21)
+        ;
+
+        
+    
+    
+            var marker_ff4c81110e01260665a3ae78cc285224 = L.marker(
+                [-15.7801, -47.9292],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_5e7f87e1a4050ae8ac744872d8e3515a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ff4c81110e01260665a3ae78cc285224.setIcon(icon_5e7f87e1a4050ae8ac744872d8e3515a);
+        
+    
+        var popup_892cfb75999d5b47c26b8fb81b9facc7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_956670d047663936748527c18c19ba68 = $(`<div id="html_956670d047663936748527c18c19ba68" style="width: 100.0%; height: 100.0%;">Brasília: 271891 casos</div>`)[0];
+                popup_892cfb75999d5b47c26b8fb81b9facc7.setContent(html_956670d047663936748527c18c19ba68);
+            
+        
+
+        marker_ff4c81110e01260665a3ae78cc285224.bindPopup(popup_892cfb75999d5b47c26b8fb81b9facc7)
+        ;
+
+        
+    
+    
+            var marker_44c15d27b54ec38d0b3a8b1021f46a72 = L.marker(
+                [-20.3155, -40.3444],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_a5754a2c04c9d0d7e30e31f911a7400b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_44c15d27b54ec38d0b3a8b1021f46a72.setIcon(icon_a5754a2c04c9d0d7e30e31f911a7400b);
+        
+    
+        var popup_5c6d36e1e66af0aef37e5804faa6afe9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac3d80605e304ce31488ea99b9f5eefe = $(`<div id="html_ac3d80605e304ce31488ea99b9f5eefe" style="width: 100.0%; height: 100.0%;">Vitória: 6809 casos</div>`)[0];
+                popup_5c6d36e1e66af0aef37e5804faa6afe9.setContent(html_ac3d80605e304ce31488ea99b9f5eefe);
+            
+        
+
+        marker_44c15d27b54ec38d0b3a8b1021f46a72.bindPopup(popup_5c6d36e1e66af0aef37e5804faa6afe9)
+        ;
+
+        
+    
+    
+            var marker_82e41471aa1ebfc5525d8aab7a1f5aef = L.marker(
+                [-16.6864, -49.2532],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_3ff3443b6d415c69d0bf18c436fafe14 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_82e41471aa1ebfc5525d8aab7a1f5aef.setIcon(icon_3ff3443b6d415c69d0bf18c436fafe14);
+        
+    
+        var popup_2f8d5b65bd4afe97596a7645eb8bd9f2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e4999f9d951eab67674ba20efafa1855 = $(`<div id="html_e4999f9d951eab67674ba20efafa1855" style="width: 100.0%; height: 100.0%;">Goiânia: 35530 casos</div>`)[0];
+                popup_2f8d5b65bd4afe97596a7645eb8bd9f2.setContent(html_e4999f9d951eab67674ba20efafa1855);
+            
+        
+
+        marker_82e41471aa1ebfc5525d8aab7a1f5aef.bindPopup(popup_2f8d5b65bd4afe97596a7645eb8bd9f2)
+        ;
+
+        
+    
+    
+            var marker_49f58b7ab375175a1efdbcde5509e870 = L.marker(
+                [-2.53073, -44.2968],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_5e6548378693ec57d3d1704341a430d4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_49f58b7ab375175a1efdbcde5509e870.setIcon(icon_5e6548378693ec57d3d1704341a430d4);
+        
+    
+        var popup_fd15458ae083cfa7cb7547b43cce6258 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3db9695806248b4aa1c9fce6dc886f97 = $(`<div id="html_3db9695806248b4aa1c9fce6dc886f97" style="width: 100.0%; height: 100.0%;">São Luís: 2085 casos</div>`)[0];
+                popup_fd15458ae083cfa7cb7547b43cce6258.setContent(html_3db9695806248b4aa1c9fce6dc886f97);
+            
+        
+
+        marker_49f58b7ab375175a1efdbcde5509e870.bindPopup(popup_fd15458ae083cfa7cb7547b43cce6258)
+        ;
+
+        
+    
+    
+            var marker_c3e217faaa1af4423798fe81326c1fee = L.marker(
+                [-15.601, -56.0979],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_6bdada9aa4389b8d2cfe1b1551c1caab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c3e217faaa1af4423798fe81326c1fee.setIcon(icon_6bdada9aa4389b8d2cfe1b1551c1caab);
+        
+    
+        var popup_3089be168598a0d47860cd74c65c1171 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_47635fbaf2900ac0ae4950d09580044e = $(`<div id="html_47635fbaf2900ac0ae4950d09580044e" style="width: 100.0%; height: 100.0%;">Cuiabá: 1362 casos</div>`)[0];
+                popup_3089be168598a0d47860cd74c65c1171.setContent(html_47635fbaf2900ac0ae4950d09580044e);
+            
+        
+
+        marker_c3e217faaa1af4423798fe81326c1fee.bindPopup(popup_3089be168598a0d47860cd74c65c1171)
+        ;
+
+        
+    
+    
+            var marker_81a8ecbdcbdacea977411d90a66a3edb = L.marker(
+                [-20.4428, -54.6466],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_1fc4e5861472c580acd065c6aea0a5ad = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_81a8ecbdcbdacea977411d90a66a3edb.setIcon(icon_1fc4e5861472c580acd065c6aea0a5ad);
+        
+    
+        var popup_fe88799eee5849b716db7e51ac3f0788 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_72258a4534a8e62d3d261821679fb727 = $(`<div id="html_72258a4534a8e62d3d261821679fb727" style="width: 100.0%; height: 100.0%;">Campo Grande: 7044 casos</div>`)[0];
+                popup_fe88799eee5849b716db7e51ac3f0788.setContent(html_72258a4534a8e62d3d261821679fb727);
+            
+        
+
+        marker_81a8ecbdcbdacea977411d90a66a3edb.bindPopup(popup_fe88799eee5849b716db7e51ac3f0788)
+        ;
+
+        
+    
+    
+            var marker_216b3ae56a952f7f484ae4885ba70692 = L.marker(
+                [-19.9281, -43.9389],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_df27464a48b4d69a99e2b17feaa04ef1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_216b3ae56a952f7f484ae4885ba70692.setIcon(icon_df27464a48b4d69a99e2b17feaa04ef1);
+        
+    
+        var popup_10b31e9f771197a468bb57b63f9779de = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4ca84917788059ced9c3e37bec4980a1 = $(`<div id="html_4ca84917788059ced9c3e37bec4980a1" style="width: 100.0%; height: 100.0%;">Belo Horizonte: 229636 casos</div>`)[0];
+                popup_10b31e9f771197a468bb57b63f9779de.setContent(html_4ca84917788059ced9c3e37bec4980a1);
+            
+        
+
+        marker_216b3ae56a952f7f484ae4885ba70692.bindPopup(popup_10b31e9f771197a468bb57b63f9779de)
+        ;
+
+        
+    
+    
+            var marker_21b2a879827842b51cc604b90bc983e6 = L.marker(
+                [-1.45502, -48.5044],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_bb659bea5c4e935595c3eadada780ff3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_21b2a879827842b51cc604b90bc983e6.setIcon(icon_bb659bea5c4e935595c3eadada780ff3);
+        
+    
+        var popup_0d98ff6b65046b2cc2d44fa6c5eef2f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ffdeccd35fce952ea4c1c0e880cf447 = $(`<div id="html_0ffdeccd35fce952ea4c1c0e880cf447" style="width: 100.0%; height: 100.0%;">Belém: 2445 casos</div>`)[0];
+                popup_0d98ff6b65046b2cc2d44fa6c5eef2f9.setContent(html_0ffdeccd35fce952ea4c1c0e880cf447);
+            
+        
+
+        marker_21b2a879827842b51cc604b90bc983e6.bindPopup(popup_0d98ff6b65046b2cc2d44fa6c5eef2f9)
+        ;
+
+        
+    
+    
+            var marker_510a5fcfc7b8f3762531afcf52554daf = L.marker(
+                [-7.11509, -34.876],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_55bb7b12f96c8935a293fec81454b9c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_510a5fcfc7b8f3762531afcf52554daf.setIcon(icon_55bb7b12f96c8935a293fec81454b9c6);
+        
+    
+        var popup_5e94fadde4b6048cd7ada8fbe4d23f7c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8535f927ebacfc2dd476cbfed1c1fdcd = $(`<div id="html_8535f927ebacfc2dd476cbfed1c1fdcd" style="width: 100.0%; height: 100.0%;">João Pessoa: 6708 casos</div>`)[0];
+                popup_5e94fadde4b6048cd7ada8fbe4d23f7c.setContent(html_8535f927ebacfc2dd476cbfed1c1fdcd);
+            
+        
+
+        marker_510a5fcfc7b8f3762531afcf52554daf.bindPopup(popup_5e94fadde4b6048cd7ada8fbe4d23f7c)
+        ;
+
+        
+    
+    
+            var marker_554e70615bcbc34bffa6ceb1c0919bd6 = L.marker(
+                [-25.4278, -49.2731],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_f1d6f4488ada188abe2f1d0f1d401948 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_554e70615bcbc34bffa6ceb1c0919bd6.setIcon(icon_f1d6f4488ada188abe2f1d0f1d401948);
+        
+    
+        var popup_44be85892acfe63630bb1d6b6c9ab680 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e1c09133d3d963b5dfbed09e181df65a = $(`<div id="html_e1c09133d3d963b5dfbed09e181df65a" style="width: 100.0%; height: 100.0%;">Curitiba: 23012 casos</div>`)[0];
+                popup_44be85892acfe63630bb1d6b6c9ab680.setContent(html_e1c09133d3d963b5dfbed09e181df65a);
+            
+        
+
+        marker_554e70615bcbc34bffa6ceb1c0919bd6.bindPopup(popup_44be85892acfe63630bb1d6b6c9ab680)
+        ;
+
+        
+    
+    
+            var marker_510aa4f5e3fb6f652af9847ff755ca47 = L.marker(
+                [-8.0476, -34.9011],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_6d092b94431b74d80ea04382f2fd1f28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_510aa4f5e3fb6f652af9847ff755ca47.setIcon(icon_6d092b94431b74d80ea04382f2fd1f28);
+        
+    
+        var popup_04fe03a76f0c391ba249f0a3b51921a2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_17206b843f06c6461bf25551f5040a08 = $(`<div id="html_17206b843f06c6461bf25551f5040a08" style="width: 100.0%; height: 100.0%;">Recife: 7656 casos</div>`)[0];
+                popup_04fe03a76f0c391ba249f0a3b51921a2.setContent(html_17206b843f06c6461bf25551f5040a08);
+            
+        
+
+        marker_510aa4f5e3fb6f652af9847ff755ca47.bindPopup(popup_04fe03a76f0c391ba249f0a3b51921a2)
+        ;
+
+        
+    
+    
+            var marker_daf7a5e5c5f09585290abdf49f6872dd = L.marker(
+                [-5.08921, -42.815],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_2732bff0ecb29b7286dccdbdc225fff8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_daf7a5e5c5f09585290abdf49f6872dd.setIcon(icon_2732bff0ecb29b7286dccdbdc225fff8);
+        
+    
+        var popup_3e9915c229163af0f752f01d8617db28 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f91bec62fd7c7d99a641f3787e81e73c = $(`<div id="html_f91bec62fd7c7d99a641f3787e81e73c" style="width: 100.0%; height: 100.0%;">Teresina: 3296 casos</div>`)[0];
+                popup_3e9915c229163af0f752f01d8617db28.setContent(html_f91bec62fd7c7d99a641f3787e81e73c);
+            
+        
+
+        marker_daf7a5e5c5f09585290abdf49f6872dd.bindPopup(popup_3e9915c229163af0f752f01d8617db28)
+        ;
+
+        
+    
+    
+            var marker_b991350f61d9a9417661ced5ddd3306b = L.marker(
+                [-22.9068, -43.1729],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_332d2c70c403e3cf1a0137dfe5d63583 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b991350f61d9a9417661ced5ddd3306b.setIcon(icon_332d2c70c403e3cf1a0137dfe5d63583);
+        
+    
+        var popup_1df44f30a6a4568a87fafbe09cf8d421 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff2c4df74d8e6228a606f2fd402bfdf6 = $(`<div id="html_ff2c4df74d8e6228a606f2fd402bfdf6" style="width: 100.0%; height: 100.0%;">Rio de Janeiro: 121383 casos</div>`)[0];
+                popup_1df44f30a6a4568a87fafbe09cf8d421.setContent(html_ff2c4df74d8e6228a606f2fd402bfdf6);
+            
+        
+
+        marker_b991350f61d9a9417661ced5ddd3306b.bindPopup(popup_1df44f30a6a4568a87fafbe09cf8d421)
+        ;
+
+        
+    
+    
+            var marker_bbc4be2c55e8ea67a915ff3d5802cc62 = L.marker(
+                [-5.795, -35.2094],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_54b68049bc7b26b347e9fb044554a520 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bbc4be2c55e8ea67a915ff3d5802cc62.setIcon(icon_54b68049bc7b26b347e9fb044554a520);
+        
+    
+        var popup_6f2675226a46bf5563c47ffcb4f3a648 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d354920a917657bec9ff7b9e5d42c6c = $(`<div id="html_1d354920a917657bec9ff7b9e5d42c6c" style="width: 100.0%; height: 100.0%;">Natal: 6128 casos</div>`)[0];
+                popup_6f2675226a46bf5563c47ffcb4f3a648.setContent(html_1d354920a917657bec9ff7b9e5d42c6c);
+            
+        
+
+        marker_bbc4be2c55e8ea67a915ff3d5802cc62.bindPopup(popup_6f2675226a46bf5563c47ffcb4f3a648)
+        ;
+
+        
+    
+    
+            var marker_0b24471b6c028e944e994c624d9fbe8b = L.marker(
+                [-30.0346, -51.2302],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_f59564613de2af09fb1a03b439c58115 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0b24471b6c028e944e994c624d9fbe8b.setIcon(icon_f59564613de2af09fb1a03b439c58115);
+        
+    
+        var popup_86c7e44bbb77788f7eec1c551ad21f97 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9a8ed2bf2935b7f46e8434ac09017ae5 = $(`<div id="html_9a8ed2bf2935b7f46e8434ac09017ae5" style="width: 100.0%; height: 100.0%;">Porto Alegre: 1637 casos</div>`)[0];
+                popup_86c7e44bbb77788f7eec1c551ad21f97.setContent(html_9a8ed2bf2935b7f46e8434ac09017ae5);
+            
+        
+
+        marker_0b24471b6c028e944e994c624d9fbe8b.bindPopup(popup_86c7e44bbb77788f7eec1c551ad21f97)
+        ;
+
+        
+    
+    
+            var marker_ff69c65ad8a42a502a291c17e03e8931 = L.marker(
+                [-8.76077, -63.9039],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_2686263dfc7ea948fa9d54736c349137 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ff69c65ad8a42a502a291c17e03e8931.setIcon(icon_2686263dfc7ea948fa9d54736c349137);
+        
+    
+        var popup_c9e5837ef492f16a2b614f5d97a619fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88abb4fc83af3346ba461e3aeac6b59c = $(`<div id="html_88abb4fc83af3346ba461e3aeac6b59c" style="width: 100.0%; height: 100.0%;">Porto Velho: 2035 casos</div>`)[0];
+                popup_c9e5837ef492f16a2b614f5d97a619fa.setContent(html_88abb4fc83af3346ba461e3aeac6b59c);
+            
+        
+
+        marker_ff69c65ad8a42a502a291c17e03e8931.bindPopup(popup_c9e5837ef492f16a2b614f5d97a619fa)
+        ;
+
+        
+    
+    
+            var marker_c3607a415fc4e1cb207b67653ca4b7f6 = L.marker(
+                [2.81999, -60.672],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_d54263efbb491cfef9520d6fa187160a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c3607a415fc4e1cb207b67653ca4b7f6.setIcon(icon_d54263efbb491cfef9520d6fa187160a);
+        
+    
+        var popup_38cee0e228e8a5da056a871e56fefb98 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_62cff286cf78b5f3169fe72561d68ff9 = $(`<div id="html_62cff286cf78b5f3169fe72561d68ff9" style="width: 100.0%; height: 100.0%;">Boa Vista: 984 casos</div>`)[0];
+                popup_38cee0e228e8a5da056a871e56fefb98.setContent(html_62cff286cf78b5f3169fe72561d68ff9);
+            
+        
+
+        marker_c3607a415fc4e1cb207b67653ca4b7f6.bindPopup(popup_38cee0e228e8a5da056a871e56fefb98)
+        ;
+
+        
+    
+    
+            var marker_16d80fcdc91579bfc9c4947ee06de3a9 = L.marker(
+                [-27.5954, -48.5477],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_be364bffdbae5e491e7528c2426292a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_16d80fcdc91579bfc9c4947ee06de3a9.setIcon(icon_be364bffdbae5e491e7528c2426292a0);
+        
+    
+        var popup_8bbb04e099afe3d54554bc28327bafa6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f34e35f4641e99690290455b6db14fa9 = $(`<div id="html_f34e35f4641e99690290455b6db14fa9" style="width: 100.0%; height: 100.0%;">Florianópolis: 25119 casos</div>`)[0];
+                popup_8bbb04e099afe3d54554bc28327bafa6.setContent(html_f34e35f4641e99690290455b6db14fa9);
+            
+        
+
+        marker_16d80fcdc91579bfc9c4947ee06de3a9.bindPopup(popup_8bbb04e099afe3d54554bc28327bafa6)
+        ;
+
+        
+    
+    
+            var marker_035ac45dcf0865bb5014a45aa74703ac = L.marker(
+                [-23.5505, -46.6333],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_4191d6272bc96581aad38e1391033183 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_035ac45dcf0865bb5014a45aa74703ac.setIcon(icon_4191d6272bc96581aad38e1391033183);
+        
+    
+        var popup_27f1793baf8b70c9d7f77bb654dc360c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6fe4ee555d07a5412b7cb287a9d6ea59 = $(`<div id="html_6fe4ee555d07a5412b7cb287a9d6ea59" style="width: 100.0%; height: 100.0%;">São Paulo: 591431 casos</div>`)[0];
+                popup_27f1793baf8b70c9d7f77bb654dc360c.setContent(html_6fe4ee555d07a5412b7cb287a9d6ea59);
+            
+        
+
+        marker_035ac45dcf0865bb5014a45aa74703ac.bindPopup(popup_27f1793baf8b70c9d7f77bb654dc360c)
+        ;
+
+        
+    
+    
+            var marker_1b0dbe1d6e2c2f0ed1b9de3717822965 = L.marker(
+                [-10.9472, -37.0731],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_d845b5376e5a37d9152c0812be1e7c21 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1b0dbe1d6e2c2f0ed1b9de3717822965.setIcon(icon_d845b5376e5a37d9152c0812be1e7c21);
+        
+    
+        var popup_2a5639eecdfedf1f7a46255c28be6b72 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_381710348b7bb13f26eee7dcaf8263ca = $(`<div id="html_381710348b7bb13f26eee7dcaf8263ca" style="width: 100.0%; height: 100.0%;">Aracaju: 3194 casos</div>`)[0];
+                popup_2a5639eecdfedf1f7a46255c28be6b72.setContent(html_381710348b7bb13f26eee7dcaf8263ca);
+            
+        
+
+        marker_1b0dbe1d6e2c2f0ed1b9de3717822965.bindPopup(popup_2a5639eecdfedf1f7a46255c28be6b72)
+        ;
+
+        
+    
+    
+            var marker_df842644a012d4e54c9fa46b3f110952 = L.marker(
+                [-10.1675, -48.3558],
+                {}
+            ).addTo(map_49f1cda19276c384101025a33a150d64);
+        
+    
+            var icon_4e30d0f599678c0dea756b075f23531a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_df842644a012d4e54c9fa46b3f110952.setIcon(icon_4e30d0f599678c0dea756b075f23531a);
+        
+    
+        var popup_e9e676ce5d94c2714f4e2b29f31c28dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_668bbfa3184dede103506d22641a2039 = $(`<div id="html_668bbfa3184dede103506d22641a2039" style="width: 100.0%; height: 100.0%;">Palmas: 5871 casos</div>`)[0];
+                popup_e9e676ce5d94c2714f4e2b29f31c28dd.setContent(html_668bbfa3184dede103506d22641a2039);
+            
+        
+
+        marker_df842644a012d4e54c9fa46b3f110952.bindPopup(popup_e9e676ce5d94c2714f4e2b29f31c28dd)
+        ;
+
+        
+    
+</script>
+</html>

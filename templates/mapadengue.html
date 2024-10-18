@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+    content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-mapadengue.css') }}">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+    <title>Mapa de Casos de Dengue no Brasil</title>
+</head>
+<body>
+    <header class="cabecalho" id="header">
+
+        <a href="#" class="logo">
+           <img src="../static/img/nuvem_dourada.png" alt="" class="logo">
+        </a>
+    
+     <nav class="navegacao-opcoes-menu">
+        <ul class="items-menu">
+            <li class="item"><a href= "{{ url_for('busca_clima')}}">Home</a></li>
+            <li class="item"><a href="{{ url_for('dengueinsight') }}">Dengue Insight</a></li>
+            <li class="item"><a href= "{{ url_for('buscar_impactos')}}">EcoDengue</a></li>
+            <li class="item"><a href= "{{ url_for('dashboard')}}">Dengue PBI</a></li>
+            <li class="item"><a href= "{{ url_for('manual')}}">Help</a></li>
+            <li class="item"><a href= "{{ url_for('sobre_nos')}}">About</a></li>
+        </ul>
+    </nav>
+    <div class="user-menu-container">
+        <img src="static/img/icone_usuario.png" alt="User Icon" class="user-icon">
+
+        <div class="user-menu">
+            <a href="{{ url_for('gerenciar_conta') }}">Gerenciar sua Conta</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div> 
+</header>
+    <div id="map">
+        <div class="title">Casos de Dengue nas Capitais do Brasil em 2024</div>
+        {{ mapa|safe }}
+    </div>
+
+<script>
+   window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/style-sobre-nos.css">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+</head>
+<body>
+    <header class="cabecalho" id="header">
+    
+        <a href="#" class="logo">
+           <img src="../static/img/nuvem_dourada.png" alt="" class="logo">
+        </a>
+    
+     <nav class="navegacao-opcoes-menu">
+        <ul class="items-menu">
+            <li class="item"><a href= "{{ url_for('busca_clima')}}">Home</a></li>
+            <li class="item"><a href="{{ url_for('dengueinsight') }}">Dengue Insight</a></li>
+            <li class="item"><a href= "{{ url_for('buscar_impactos')}}">EcoDengue</a></li>
+            <li class="item"><a href= "{{ url_for('dashboard')}}">Dengue PBI</a></li>
+            <li class="item"><a href= "{{ url_for('manual')}}">Help</a></li>
+            <li class="item"><a href= "{{ url_for('sobre_nos')}}">About</a></li>
+        </ul>
+    </nav>
+    <div class="user-menu-container">
+        <img src="static/img/icone_usuario.png" alt="User Icon" class="user-icon">
+
+        <div class="user-menu">
+            <a href="{{ url_for('gerenciar_conta') }}">Gerenciar sua Conta</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div> 
+</header>
+</head>
+<body>
+    <div class="sobre-nos">
+        <div class="sobre">
+            <h1><br><br>SOBRE NÓS</h1>
+        </div>
+        <div class="the-future">
+            <h1>THE FUTURE</h1>
+        </div>
+        <div class="conteudo-sobre-nos">
+            Somos uma dupla de alunas de Ciência de Dados da Fatec de Santana de Parnaíba,<br> dedicadas a criar uma ferramenta inovadora para fornecer informações relevantes sobre o Clima e a sua correlação com a doença epidemológica Dengue.
+            Estamos comprometidas em contribuir para a conscientização e a tomada de decisões informadas em relação a questões ambientais e de saúde pública.
+        </div>
+        <div class="projeto">
+            <h1><br>NOSSO PROJETO <img src="static/img/img_mosquito.png" alt=""></h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>A FERRAMENTA COMPLETA</h1>
+        </div>
+        <div class="explicacao-projeto">
+            <p>A relação entre mudança climática e saúde pública é um campo de estudo em 
+                constante evolução, considerando os impactos significativos das alterações climáticas 
+                na propagação de doenças. As mudanças climáticas não apenas afetam os padrões 
+                climáticos globais, mas também têm consequências diretas e indiretas na saúde 
+                humana, através de fatores como aumento da temperatura, alterações nos padrões 
+                de precipitação, mudanças na distribuição de vetores de doenças e impactos nos 
+                ecossistemas naturais.<br>
+                <br>Segundo um comunicado à imprensa emitido pela Organização Mundial da Saúde 
+                (OMS) em 1º de dezembro de 2023, foi alertado sobre o aumento global da incidência 
+                de dengue e a crescente ameaça que essa doença representa para a saúde pública. 
+                A organização enfatizou que as mudanças climáticas estão exacerbando a 
+                propagação da dengue, ampliando ainda mais sua gravidade como problema de 
+                saúde.
+                </p>
+            <p>A dengue é uma das doenças transmitidas por mosquitos de maior impacto 
+            global, afetando milhões de pessoas todos os anos e representando uma carga 
+            significativa para os sistemas de saúde em todo o mundo (WHO, 2020).<br>
+            Com o aumento das temperaturas globais e as mudanças nos padrões de 
+            precipitação associados à mudança climática, espera-se que a incidência da dengue 
+            aumente e que novas áreas geográficas se tornem suscetíveis à propagação da 
+            doença.
+            <br>Portanto, compreender os mecanismos pelos quais a mudança climática 
+            influencia a ecologia dos mosquitos transmissores da dengue e a dinâmica de 
+            propagação do vírus é crucial para desenvolver estratégias eficazes de prevenção e 
+            controle da doença.</p>
+            <p><br>Nosso objetivo é explorar detalhadamente a relação entre mudança climática 
+            e incidência de dengue, portanto propomos o desenvolvimento de uma plataforma que ofereça 
+            dados e análises específicas para compreender essa interação e aprimorar 
+            estratégias de prevenção e controle da doença. Essa plataforma investigará perguntas 
+            fundamentais de como a mudança climática pode influenciar no aumento dos casos 
+            de dengue e como as estratégias de combate à dengue devem ser adaptadas para 
+            enfrentar os desafios impostos pelo aumento da temperatura e outras alterações 
+            climáticas.</p>
+            <p>Estamos comprometidos em utilizar nossos conhecimentos em Ciência de Dados para desenvolver uma solução inovadora<br> que tenha um impacto positivo na qualidade de vida das pessoas e na preservação do meio ambiente, a fim de fornecer insights para minimizar a proliferação da Dengue.</p>
+            <p>Esperamos que o iBIDEN contribua para um futuro mais sustentável e consciente em relação às questões climáticas e de saúde pública.</p>
+            <p>Junte-se a nós nesta jornada em direção a um mundo mais verde e informado!</p>
+        </div>
+        <div class="integrantes">
+            <h1><br>INTEGRANTES</h1>
+        </div>
+        <div class="desenvolvedores">
+            <h1>DESENVOLVEDORAS</h1>
+        </div>
+        <div class="icones-nomes">
+            <div>
+                <div class="icone">
+                    <a href="https://www.linkedin.com/in/asvnathalia/" target="_blank">
+                    <img src="static/img/nathalia.jpeg" alt=""></a>
+                </div>
+                <div class="nome">
+                    <a href="https://www.linkedin.com/in/asvnathalia/" target="_blank">
+                        <p>Nathalia Viana</p></a>
+                </div>
+            </div>
+            <div>
+                <div class="icone">
+                    <a href="https://www.linkedin.com/in/nayra-alencar-364388184" target="_blank">
+                    <img src="static/img/nayra.jpeg" alt=""></a>
+                </div>
+                <div class="nome">
+                    <a href="https://www.linkedin.com/in/nayra-alencar-364388184" target="_blank">
+                        <p>Nayra Alencar</p></a>
+                </div>
+            </div>
+        </div>
+         
+        <div class="grupo">
+            <h1><br>O GRUPO</h1>
+        </div>
+        <div class="ibiden">
+            <h1>IBIDEN&reg;</h1>
+        </div>
+        <div class="explicacao-grupo">
+            <p>Era uma vez, em uma pequena sala de aula na Fatec de Santana de Parnaíba, duas mentes inquisitivas<br> se uniram para embarcar em uma jornada de descoberta e criação. Elas eram <strong>  Nathalia e Nayra</strong><br> jovens estudantes de Ciência de Dados com um desejo ardente de fazer a diferença no mundo.<br><br>Assim nasceu o grupo <strong>iBIDEN</strong> (lê-se AIBAIDEN).</p>
+
+            <p>O nome "iBIDEN" surgiu em uma conversa de brainstorming. <br:>A ideia surgiu de combinar "inteligência" com "dados" e "inovação",<br> criando o acrônimo iBIDEN. Era apropriado, pois o grupo estava comprometido em usar a inteligência e a inovação para extrair<br> insights valiosos dos dados.</p>
+
+            <div class="projetos_passados">
+                <h1><br>UM OLHAR PARA O PASSADO</h1>
+            </div>
+            <div class="heranca">
+                <h1>NOSSA HERANÇA DE INOVAÇÃO</h1>
+            </div>
+            <p><br></r>Em meio ao segundo semestre de nossa jornada universitária, nos unimos com um propósito claro: enfatizar a importância<br>do controle no contexto do agendamento, com o intuito de reduzir prejuízos no transporte logístico, fomentar a inovação e<br>otimizar a utilização de recursos. Para alcançar essa missão, desenvolvemos um Dashboard avançado, que nos permitiu mapear<br> e controlar o fluxo de entregas por meio de análises preditivas baseadas em dados históricos.</p>
+
+            <p>No terceiro semestre de nossa formação em Ciência de Dados, nos desafiamos a criar uma aplicação que possibilita a entrada de<br> variáveis previamente selecionadas para aqueles interessados em solicitar empréstimos. Nossa metodologia se baseou em extensas<br>pesquisas bibliográficas sobre o conceito de crédito e sua importância global para indivíduos e instituições financeiras.<br> Implementamos o CRISP-DM (Cross Industry Standard Process for Data Mining) para orientar o desenvolvimento do projeto, e utilizamos<br> ferramentas avançadas de Ciência de Dados e Machine Learning para construir a solução.<br>O resultado final oferece aos candidatos uma rápida avaliação, determinando sua aprovação ou rejeição, além de fornecer uma análise<br> de viabilidade para identificar a capacidade de pagamento do valor solicitado.</p>
+
+
+            <p>A jornada do grupo iBIDEN não parou por aí. Assumimos um desafio ambicioso: criar um motor de busca que integrasse informações sobre clima,<br> trânsito e impactos ambientais. Cientes da complexidade da tarefa, abraçamos a pesquisa, codificação e colaboração como nossos pilares.</p>
+
+            <p>Ao longo dos meses, enfrentamos desafios e obstáculos com resiliência. Estudamos, aprendemos e nos adaptamos constantemente,<br> superando cada obstáculo no caminho. Passamos por testes rigorosos e refinamos nossa criação até alcançarmos a satisfação com o resultado.</p>
+
+            <p>E assim continua a saga do grupo iBIDEN, sempre na busca da inovação, prontos para enfrentar novos desafios e criar soluções que<br>possam impactar positivamente o mundo.</p>
+            <p><br></p>
+
+            <p>Para explorar em detalhes nossos projetos e conquistas, convidamos você a acessar nosso repositório no DRIVE:</p>
+            <a href="https://drive.google.com/drive/folders/1zkKcSYbd0H_eSWS6A_OJkLBvmjpDVNVT?usp=share_link" target="_blank">
+                <button><p><br>Desenvolvimentos iBIDEN</p></button>
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        window.addEventListener('scroll', function() {
+         var header = document.getElementById('header');
+         if (window.scrollY > 50) {
+             header.classList.add('scrolled');
+         } else {
+             header.classList.remove('scrolled');
+         }
+     });
+     
+     </script>
+</body>
+</html>

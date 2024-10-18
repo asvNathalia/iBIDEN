@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/style-resultado-impacto.css">
+    <title>iBIDEN - Resultados da Pesquisa</title>
+    <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+</head>
+<body>
+    <header class="cabecalho" id="header">
+    
+        <a href="#" class="logo">
+           <img src="../static/img/nuvem_dourada.png" alt="" class="logo">
+        </a>
+    
+     <nav class="navegacao-opcoes-menu">
+        <ul class="items-menu">
+            <li class="item"><a href= "{{ url_for('busca_clima')}}">Home</a></li>
+            <li class="item"><a href="{{ url_for('dengueinsight') }}">Dengue Insight</a></li>
+            <li class="item"><a href= "{{ url_for('buscar_impactos')}}">EcoDengue</a></li>
+            <li class="item"><a href= "{{ url_for('dashboard')}}">Dengue PBI</a></li>
+            <li class="item"><a href= "{{ url_for('manual')}}">Help</a></li>
+            <li class="item"><a href= "{{ url_for('sobre_nos')}}">About</a></li>
+        </ul>
+    </nav>
+        <div class="user-menu-container">
+            <img src="static/img/icone_usuario.png" alt="User Icon" class="user-icon">
+
+            <div class="user-menu">
+                <a href="{{ url_for('gerenciar_conta') }}">Gerenciar sua Conta</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div> 
+    </header>
+    </div>
+    <div class="resultado">
+        <h1><br><br>Ecossistema Climático e Saúde em Foco</h1>
+        <h2>as principais notícias do meio ambiente e da dengueo</h2>
+        <div class="pesquisa-resultados">
+            <form action="/pesquisar" method="post">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="text" id="query" name="query" placeholder="Digite sua cidade" class="caixa-pesquisa">
+                        </td>
+                        <td>
+                            <button type="submit">
+                                <i class="fas fa-search"></i> <!-- Ícone de pesquisa -->
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        
+        <ul>
+            {% for result in results %}
+                <li>
+                    {% if result.title and result.title.strip() != "Slide sem título" %}
+                        <h3>{{ result.title }}</h3>
+                    {% else %}
+                        <p>{{ result.snippet }}</p>
+                    {% endif %}
+                    
+                    {% if result.link %}
+                        <a class="links" href="{{ result.link }}"  target="_blank">{{ result.link }}</a>
+                    {% endif %}
+                   
+                    {% if result.snippet %}
+                        <p>{{ result.snippet }}</p>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        
+
+            <!-- Links de paginação -->
+        <div class="pagination">
+            {% if page > 1 %}
+                <a class="pagination-link" href="{{ url_for('search', query=request.form['query'],page=page-1) }}">Anterior</a>
+            {% endif %}
+
+            {% if page < total_pages %}
+                <a class="pagination-link" href="{{ url_for('search', query=request.form['query'], page=page+1) }}">Próxima</a>
+            {% endif %}
+        </div>
+    </div>   
+
+<script>
+   window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+</script>
+
+</body>
+</html>

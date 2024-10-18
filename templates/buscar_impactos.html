@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/style-buscar-impactos.css">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+
+</head>
+<body>
+    <header class="cabecalho" id="header">
+    
+        <a href="#" class="logo">
+           <img src="../static/img/nuvem_dourada.png" alt="" class="logo">
+        </a>
+    
+     <nav class="navegacao-opcoes-menu">
+        <ul class="items-menu">
+            <li class="item"><a href= "{{ url_for('busca_clima')}}">Home</a></li>
+            <li class="item"><a href="{{ url_for('dengueinsight') }}">Dengue Insight</a></li>
+            <li class="item"><a href= "{{ url_for('buscar_impactos')}}">EcoDengue</a></li>
+            <li class="item"><a href= "{{ url_for('dashboard')}}">Dengue PBI</a></li>
+            <li class="item"><a href= "{{ url_for('manual')}}">Help</a></li>
+            <li class="item"><a href= "{{ url_for('sobre_nos')}}">About</a></li>
+        </ul>
+    </nav>
+    <div class="user-menu-container">
+        <img src="static/img/icone_usuario.png" alt="User Icon" class="user-icon">
+
+        <div class="user-menu">
+            <a href="{{ url_for('gerenciar_conta') }}">Gerenciar sua Conta</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div> 
+</header>
+    </header>
+    <main class="pesquisa-impactos" id="pesquisa">
+        <section class="pesquisa">
+            <h1 class="titulo">iBIDEN <br>EcoDengue SEARCH</h1>
+            <div class="pesquisa">
+                <form action="/search" method="post">
+                    <input type="text" id="query" name="query" placeholder="Digite sua cidade e obtenha os principais impactos perto de você" class="caixa-pesquisa"><br>
+                    <input type="submit" value ="Pesquisar"> 
+                </form>        
+            </div>
+            <div class="imagem-search projeto2 mostrar"></div>
+        </section>
+    </main>
+    <div class="espacamento"></div>
+    <main class="descanso-tela" id="info">
+        <section class="descanso">
+            <div class="image-container">
+                <div class="image-caption">
+                    <a href="{{ url_for('index')}}">
+                        <img class="acompanhe" src="static/img/acompanhe_em_tempo_real.jpeg" alt="documentario">
+                    </a>
+                    <a href="{{ url_for('index')}}">
+                        <p>Acompanhe em tempo real as principais<br> tendências sobre Clima&Tempo</p>
+                    </a>
+                </div>
+                <div class="image-caption">
+                    <a href="{{ url_for('buscar_impactos')}}">
+                         <img class="saiba" src="static/img/noticias_palma_mão.jpeg" alt="saiba-mais">
+                    </a>
+                    <a href="{{ url_for('buscar_impactos')}}">
+                        <p>Acesse as principais noticias sobre os<br> Impactos Ambientais na palma da sua mão</p>
+                    </a>
+                </div>
+                <div class="image-caption">
+                    <a href="{{ url_for('dengueinsight')}}">
+                        <img class="noticias" src="static/img/clima_geolocalização.jpeg">
+                    </a>
+                    <a href="{{ url_for('dengueinsight')}}">
+                        <p>Todas as informações sobre o Clima&Tempo<br> na sua região a um clique de distância</p>
+                    </a>
+                </div>
+            </div>
+    <div class="espacamento"></div>
+    <main class="conteudo-final">
+        <section class="feedback">
+            <h1 class="titulo">Gostaríamos de saber a sua perspectiva</h1>
+            <div class= "frase-feedback">
+                <p>Compartilhe sua opinião e ajude-nos a aprimorar sua experiência aqui no IBIDEN. <br>Valorizamos suas sugestões para oferecer um serviço melhor.<br><br>Clique no botão abaixo e deixe seu feedback</p>
+            </div>
+            <div class="imagem-feedback"></div>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=veJyzyt6g0e96znVewf3bxP3XRBkcHFFkSY_Y_rmpwxUMDcxV1FQVklHQkVaUktUSzAzSUhRV1EzUC4u"  target="_blank">
+                <div class="feedback-button">
+                    <button>FEEDBACK</button>
+                </div>
+            </a>
+            <section>
+                <div class="direitos">
+                    <h1>IBIDEN&reg;</h1>
+                    <p><br>&copy; 2023.<br>All rights reserved.</p>
+                </div>
+                <div class="tags">
+                    <h1>TAGS</h1>
+                    <p><br>mudanças climáticas   •   news<br>  •   previsão em tempo real</p>
+                </div>
+                <div class="about">
+                    <h1>ABOUT</h1>
+                <a href="{{ url_for('sobre_nos')}}">
+                    <div class="about-button">
+                        <button><p>Sobre nós</p></button>
+                    </div>
+                </a>
+            </section>                        
+        </section>
+    </main>
+<script>
+   window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+</script>
+</body>
+</html>
+   

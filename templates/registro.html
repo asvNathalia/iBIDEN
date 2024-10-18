@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-registro.css') }}">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/nuvem_dourada.png') }}">
+</head>
+<body class="body">
+
+    <form action="/registro" method="POST" class="registration-form">
+        {% if mensagem %}
+        <p>{{ mensagem }}</p>
+        {% endif %} 
+
+        <label for="usu_nome">Nome Completo:</label><br>
+        <input type="text" id="usu_nome" name="usu_nome" required><br><br>
+      
+        <label for="usu_email">Email:</label><br>
+        <input type="email" id="usu_email" name="usu_email" required><br><br>
+        
+        <label for="usu_pass">Senha:</label><br>
+        <input type="password" id="usu_pass" name="usu_pass" required><br><br>        
+        <div class="button-and-text">
+            <input type="submit" name="enviar" value="Registrar-se no iBIDEN">         
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('login')}}">Faça o seu Login</a>
+        </div>
+    </form>
+</body>
+</html>

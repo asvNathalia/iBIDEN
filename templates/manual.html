@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="static/style-manual.css">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+</head>
+<body>
+
+    <header class="cabecalho" id="header">
+    
+        <a href="#" class="logo">
+           <img src="../static/img/nuvem_dourada.png" alt="" class="logo">
+        </a>
+    
+     <nav class="navegacao-opcoes-menu">
+        <ul class="items-menu">
+            <li class="item"><a href= "{{ url_for('busca_clima')}}">Home</a></li>
+            <li class="item"><a href="{{ url_for('dengueinsight') }}">Dengue Insight</a></li>
+            <li class="item"><a href= "{{ url_for('buscar_impactos')}}">EcoDengue</a></li>
+            <li class="item"><a href= "{{ url_for('dashboard')}}">Dengue PBI</a></li>
+            <li class="item"><a href= "{{ url_for('manual')}}">Help</a></li>
+            <li class="item"><a href= "{{ url_for('sobre_nos')}}">About</a></li>
+        </ul>
+    </nav>
+    <div class="user-menu-container">
+        <img src="static/img/icone_usuario.png" alt="User Icon" class="user-icon">
+
+        <div class="user-menu">
+            <a href="{{ url_for('gerenciar_conta') }}">Gerenciar sua Conta</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div> 
+</header>
+<body>
+    <div class="manual">
+        <div class="manual_titulo">
+            <h1><br><br>MANUAL</h1>
+        </div>
+        <div class="manual_subtitulo">
+            <h1>AQUI VOCÊ ENCONTRA O GUIA DA FERRAMENTA</h1>
+        </div>
+        <div class="conteudo">
+            <p>Bem-vindo ao iBIDEN!<br>
+
+            <br>Estamos animados em tê-lo conosco! Este é o seu ponto de partida para explorar informações atualizadas sobre o clima, previsões meteorológicas e os impactos ambientais em constante evolução.<br>            
+                
+            <br>Nessa seção você encontra o guia completo da ferramenta para te guiar na jornada do Clima&Tempo na Era da Mudança Climática<br></p>
+        </div>
+
+        <div class="figura">
+            <h1><br><br>DOCUMENTAÇÃO iBIDEN</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>A CONSTRUÇÃO</h1>
+        </div>
+        <div class="conteudo">
+            Antes de mais nada, para que você possa utilizar nossa ferramenta no seu Smartphone, coloque no modo Computador.<br>Estamos aprimorando nossos recursos para melhor lhe servir!<br>
+        </div>
+        <div class="figura">
+            <h1><br>O iBIDEN NO SEU CELULAR</h1>
+        </div>
+        <div class="imagem-celular">
+            <img src="static/img/manual_celular_desktop.jpg" alt="">
+        </div>
+        
+        <div class="conteudo">
+            Para que a ferramenta iBIDEN pudesse oferecer recursos relacionados com o Clima&Tempo e seu Impacto Ambiental, foi feito o uso de linguagens de programação e integração com APIs,   que você pode ter acesso a mais informações nessa seção<br>
+
+            <br>Para a construção da página WEB foi utilizado a linguagem de marcação de hipertexto HTML (HyperText Markup Language) para criar e estruturar conteúdo acerca das questões que giram em torno deste estudo. Ela foi fundamental para especificar a estrutura e o formato dos elementos da página, como textos, imagens, links e outros elementos interativos presentes na plataforma.<br>
+
+            <br>Além disso, também foi feito o uso do CSS (Cascading Style Sheets) que é uma tecnologia essencial que complementa o HTML na construção de páginas da web. O CSS pode ser definido como uma linguagem de estilo que separa a apresentação e o layout do conteúdo. Ele permitiu que fossem criadas regras de estilo para controlar a aparência visual dos elementos HTML, como cores, fontes, espaçamentos, tamanhos e posicionamento dos elementos presentes na plataforma. O CSS foi fundamental para a personalização e a estilização das páginas web, tornando-as visualmente atraentes e funcionais para os usuários.<br>
+
+            <br>Em relação à parte lógica da estrutura do motor de busca, foi realizada a ligação na API do Google para que ele fosse capaz de retornar os resultados das buscas feitas pelos usuários, levando em consideração os parâmetros de busca de resultados em português que contivessem as palavras chaves:  “Mudanças Climáticas", "Efeito Estufa", "Impacto Ambiental" e  "Aquecimento Global”.<br>
+            Isso permitiu que o mecanismo de busca aproveitasse a enorme base de dados do Google para buscar informações relevantes em tempo real, alinhando-se com os parâmetros de busca definidos.  Para tanto, foi utilizada a linguagem de programação Javascript que desempenhou um papel crucial nesse processo.<br>
+
+            <br>JavaScript é uma linguagem versátil e amplamente suportada que é executada diretamente no navegador do usuário. Isso possibilitou a criação de uma experiência de busca interativa e responsiva, que permite aos usuários inserir suas consultas, ver os resultados e interagir com as informações de maneira fluida.<br>
+
+            <br>A integração da API do Google e o uso da linguagem de programação JavaScript desempenharam um papel crucial na criação de um motor de busca eficaz e amigável, que fornece aos usuários acesso rápido e preciso às informações desejadas sobre temas ambientais críticos.<br>
+                
+            <br>Portanto, a partir das ferramentas supracitadas aplicadas à construção de um motor de busca focado no sistema meteorológico e os impactos ambientais e suas consequências climáticas, foi possível criar um motor de busca de impactos ambientais que não apenas rastreie e identifique esses impactos e as torne acessíveis a todos os públicos.
+
+            <br>O acesso à informação desempenha um papel fundamental na resolução de problemas, proporcionando uma base sólida para a tomada de decisões fundamentadas em dados concretos, reais e atualizados, o que, por sua vez, gera incentivos para a implementação de soluções sustentáveis.<br>
+                
+            <br>Com base nisso, foi realizada a confecção de um motor de busca, como pode ser observado na Figura 1, sendo esta a  primeira interface disponível denominada "Clima&Tempo", na qual o usuário tem a capacidade de inserir dados relacionados à cidade de interesse, com o objetivo de obter informações detalhadas sobre as condições meteorológicas locais.
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 1 - PÁGINA PRINCIAL</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>MOTOR DE BUSCA CLIMA&TEMPO</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/manual_pagina_principal.JPG" alt="">
+        </div>
+        <div class="conteudo">
+            Ao realizar essa consulta, o usuário será redirecionado para a próxima etapa do sistema, o resultado de sua busca.<br>
+            Essa possui como finalidade principal é fornecer informações em tempo real sobre parâmetros climáticos, tais como velocidade do vento, radiação solar, precipitação e umidade do ar, em relação à temperatura. Todos esses dados serão disponibilizados instantaneamente após a realização da pesquisa, como pode ser observado na Figura 2.
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 2 - RESULTADO CLIMA&TEMPO</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>CLIMA&TEMPO</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/manual_resultado_clima.jpg" alt="">
+        </div>
+        <div class="conteudo">
+            Adicionalmente, nossa plataforma é equipada com um sistema de geolocalização que permite ao usuário acessar informações relevantes relacionadas ao clima, trânsito, transporte público e um mapa de calor da região de interesse.<br>
+            Para isso, é disponibilizado duas opções de Mapas com informações distintas para melhor forner informações ao usuário. Dentro da aba “Geolocalização”, será possível ter acesso a interface de de escolha, como demonstrado na Figura 3.
+            Além disso,  para proporcionar aos usuários uma experiência orientada, disponibilizamos um ícone contendo as informações necessárias para a interpretação dos mapas disponíveis.
+        </div>
+            
+        <div class="figura">
+            <h1><br>FIGURA 3 - GEOLOCALIZAÇÃO</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>MAPAS</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/manual_mapas_geo.jpg" alt="">
+        </div>
+        <div class="conteudo">
+            No primeiro ícone, o utilizador será direcionado para uma página que exibirá três mapas distintos, de acordo com o país de pesquisa. Para a confecção e disponibilização dessa ferramenta foi feito o uso da API WEATHER, que possibilita que os desenvolvedores façam a utilização de seus recursos.<br>
+            Na figura 4, temos o exemplo de mapa de Vento, ou seja, uma representação gráfica crucial que fornece informações sobre a direção e velocidade do vento em uma determinada região, desempenhando um papel fundamental em inúmeras aplicações. Na meteorologia, auxilia na previsão do clima e identificação de sistemas climáticos. Além disso, os mapas de vento são valiosos para monitoramento ambiental e pesquisa. Além disso, ele permite decisões informadas e estratégicas em áreas que variam desde a segurança aérea até a conservação ambiental.<br>
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 4 - MAPA DE VENTO</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>WEATHER API</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/manual_mapa_vento.jpg" alt="">
+        </div>
+        <div class="conteudo">
+            Para além desses recursos, a área interativa conta com o mapa de temperatura, conforme figura 5, que pode ser compreendido como uma representação visual que exibe a variação das temperaturas em uma determinada área geográfica. Nesse tipo de mapa, cores ou tons diferentes são usados para indicar as temperaturas em diferentes locais. <br>
+            Geralmente, as cores quentes, como o vermelho e o laranja, representam temperaturas mais altas, enquanto as cores frias, como o azul e o verde, indicam temperaturas mais baixas.<br>
+            Esses mapas são frequentemente usados em meteorologia e climatologia para visualizar padrões de temperatura em uma região, ajudando na previsão do clima, no monitoramento de mudanças climáticas e na compreensão das variações sazonais.
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 5 - MAPA DE  CALOR</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>WEATHER API</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/manual_mapa_calor.jpg" alt="">
+        </div>
+        <div class="conteudo">
+            Importante salientar que em todas as opções disponíveis há um artificio que permite o ajuste na altitude da superfície, ou seja, os dados presentes nos mapas variam de acordo com a “superfície” estabelecida.<br>
+            Como pode ser notado na figura 6, o Mapa de Pressão representa distribuições de pressão atmosférica ao redor do globo, sendo que a localização a ser mostrada depende da área de interesse da pesquisa. A pressão atmosférica é uma medida da força exercida pelo ar em uma determinada área e varia com base em vários fatores, como a altitude, a temperatura e a umidade.            
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 6 - MAPA DE  PRESSÃO</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>WEATHER API</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/manual_mapa_pressao.jpg" alt="">
+        </div>
+        <div class="conteudo">
+            Devido ao reconhecimento do impacto direto das condições climáticas no cotidiano, o segundo mapa na figura 7 é capaz de apresentar informações de trânsito e transporte público em uma única interface. <br>
+            Além disso, por meio da conexão da API do Google, também é possível acessar o “Street View”, que consiste em um recurso do Google Maps e do Google Earth que disponibiliza vistas panorâmicas de 360° na horizontal e 290° na vertical; e permite que os usuários vejam partes de algumas regiões do mundo ao nível do solo.           
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 7 - Mapa de Trânsito, Transporte Público e Street View</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>GOOGLE API</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/manual_mapa_google.jpg" alt="">
+        </div>
+        <div class="conteudo">
+            Tendo em vista o objetivo de alcançar um compromisso com a promoção da educação ambiental, a plataforma também possui uma seção denominada "Cinema iBIDEN”, conforme apresentada na figura 8, na qual os usuários poderão encontrar recomendações de filmes, séries e documentários relacionados ao meio ambiente. A intenção é manter uma seleção diversificada de conteúdo para atender às diversas preferências de nosso público. 
+            Nesse contexto, a ferramenta também desempenha um papel fundamental ao oferecer amplo e eficaz acesso à informação. Isso possibilita que as pessoas tomem decisões informadas e contribuam ativamente para a preservação do meio ambiente.                       
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 8 - DOCUMENTÁRIOS</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>SOBRE IMPACTO AMBIENTAL</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/manual_documentarios.jpg" alt="">
+        </div>
+        <div class="conteudo">
+            Além disso, nossa plataforma inclui uma ferramenta de pesquisa dedicada aos impactos ambientais, conforme demonstrada na figura 9.<br>
+            Nessa funcionalidade, os usuários podem obter informações atualizadas sobre eventos relacionados ao meio ambiente com apenas um clique. Basta inserir o nome de sua cidade, e a plataforma retornará as principais notícias sobre impacto ambiental naquela região.                     
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 9 - MOTOR DE BUSCA</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>IMPACTOS AMBIENTAIS</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/manual_busca_impactos.jpg" alt="">
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 10 - RESULTADO DA BUSCA</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>IMPACTOS AMBIENTAIS</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/manual_resultado_impactos.jpg" alt="">
+        </div>
+        <div class="conteudo">
+            Na Figura 10, apresentamos o resultado obtido após a execução de uma pesquisa direcionada a uma cidade específica. Nesse processo, o sistema utiliza técnicas de correspondência de palavras-chave relacionadas ao impacto ambiental e à localização fornecida. Como resultado, o software disponibiliza informações específicas, permitindo que o usuário acesse fontes de dados, sites e materiais de pesquisa pertinentes ao tema abordado.<br>
+            Diante dessa ferramenta, a informação ambiental é tratada como uma fonte crucial para estimular o envolvimento do público nas decisões que impactam o meio ambiente. Portanto, essa ferramenta possibilita um acesso facilitado às informações.<br>
+        </div>
+        <div class="conteudo">
+            Além disso, com o intuito de continuar o desenvolvimento deste projeto, foi criado uma seção para que os usuários possam fornecer seu ponto de vista acerca da plataforma e do tema proposto. Para isso, conforme figura 12, no rodapé de cada página apresentada, há uma solicitação de feedback:
+        </div>
+        <div class="figura">
+            <h1><br>FIGURA 11 - FEEDBACK</h1>
+        </div>
+        <div class="motor-de-busca">
+            <h1>SUA PARTICIPAÇÃO É MUITO IMPORTANTE</h1>
+        </div>
+        <div class="imagens">
+            <img src="static/img/manual_feedback.jpg" alt="">
+        </div>
+        <div class="conteudo">
+            A partir dessa iniciativa, que conta com dez perguntas objetivas, será possível manter a plataforma atualizada e usual. Assim, fomenta o sucesso contínuo de um projeto como o motor de busca e mantem a relevância nas informações, segurança nos dados a e aprimoramento da plataforma tendo em vista as necessidades dos usuários.<br>
+            O grupo iBIDEN também expressa a esperança de que seu motor de busca seja uma contribuição significativa para um futuro mais sustentável e consciente das questões relacionadas ao clima e ao meio ambiente. <br>
+            Junte-se a nós em um esforço para criar conscientização e promoção de uma ação em prol do meio ambiente em uma jornada de colaboração e engajamento na causa ambiental.<br>
+            <br>Para explorar em detalhes nossos projetos e conquistas, convidamos você a acessar nosso repositório no DRIVE:
+        </div>
+        <a href="https://drive.google.com/drive/folders/1zkKcSYbd0H_eSWS6A_OJkLBvmjpDVNVT?usp=share_link" target="_blank">
+            <button><p>Desenvolvimentos iBIDEN</p></button>
+        </a>
+    </div>
+
+<script>
+   window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+</script>
+</body>
+</html>

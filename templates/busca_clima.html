@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>iBIDEN</title>
+        <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+        <link rel="stylesheet" href="../static/style-busca-clima.css">
+    </head>
+    <body>
+        <header class="cabecalho" id="header">
+    
+            <a href="#" class="logo">
+               <img src="../static/img/nuvem_dourada.png" alt="" class="logo">
+            </a>
+        
+         <nav class="navegacao-opcoes-menu">
+            <ul class="items-menu">
+                <li class="item"><a href= "{{ url_for('busca_clima')}}">Home</a></li>
+                <li class="item"><a href="{{ url_for('dengueinsight') }}">Dengue Insight</a></li>
+                <li class="item"><a href= "{{ url_for('buscar_impactos')}}">EcoDengue</a></li>
+                <li class="item"><a href= "{{ url_for('dashboard')}}">Dengue PBI</a></li>
+                <li class="item"><a href= "{{ url_for('manual')}}">Help</a></li>
+                <li class="item"><a href= "{{ url_for('sobre_nos')}}">About</a></li>
+            </ul>
+        </nav>
+        <div class="user-menu-container">
+            <img src="static/img/icone_usuario.png" alt="User Icon" class="user-icon">
+
+            <div class="user-menu">
+                <a href="{{ url_for('gerenciar_conta') }}">Gerenciar sua Conta</a>
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </div>
+        </div> 
+    </header>
+
+
+    <main class="conteudo-principal" id="projetos">
+        <section class="paineis">
+            <h1 class="titulo">iBIDEN FORECAST</h1>
+            <div class="pesquisa">
+                <form action= "/get_weather" method="post">
+                    <input type="text" id="cidade" name="cidade" required placeholder="Digite sua cidade e descubra o Clima&Tempo" class="caixa-pesquisa"><br>
+                    <input type="submit" value="Pesquisar">
+                </form>
+            </div>
+            
+            <div class= "frase-abaixo">
+                <p>Explore com precisão as condições climáticas e embarque em uma jornada <BR>personalizada pelo mundo da meteorologia com iBIDEN: descubra o futuro meteorológico.</p>
+            </div>
+            <div class="imagem-painel projeto1 mostrar"></div>
+        </section>
+    </main>
+    <div class="espacamento"></div>
+
+    <main class="cinema-ibiden" id="noticias">
+        <section class="noticias">
+            <div class = "titulo-noticias"> 
+                <h1>Cinema iBIDEN<br></h1>
+                <h2>Sugestões de Documentários Ambientais que transformam Visões em Ações</h2>
+                <p><br></p>
+            </div>
+            <div class = "slides-noticias"> 
+                <!--Radio Buttons-->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+                <input type="radio" name="radio-btn" id="radio7">
+                <input type="radio" name="radio-btn" id="radio8">
+                <input type="radio" name="radio-btn" id="radio9">
+                <!--FIM Radio Buttons-->
+
+                <div class="slide first">
+                    <a href="https://www.youtube.com/watch?v=BFGeDkW3Ago" target="_blank">
+                        <img src="static/img/slide9.jpg" alt="">
+                    </a>
+                </div>                
+               <div class="slide">
+                    <a href="https://www.youtube.com/watch?v=xDdEWkA15Rg" target="_blank">
+                        <img src="static/img/slide2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="https://www.netflix.com/br/title/80049832" target="_blank">
+                        <img src="static/img/slide3.jpg" alt="">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="https://www.netflix.com/br/title/80033772" target="_blank">
+                        <img src="static/img/slide4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="https://www.primevideo.com/dp/amzn1.dv.gti.80b4bf08-cbe3-8319-dcd2-e5d9121d78e1?autoplay=0&ref_=atv_cf_strg_wb" target="_blank">
+                        <img src="static/img/slide5.jpg" alt="">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="https://www.adorocinema.com/filmes/filme-200355/" target="_blank">
+                        <img src="static/img/slide6.jpg" alt="">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="https://www.netflix.com/br/title/80168188" target="_blank">
+                        <img src="static/img/slide7.jpg" alt="">
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href=""></a>
+                    <img src="static/img/slide8.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="static/img/slide1.jpg" alt="">
+                </div>
+
+
+                <!--Navegação-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                    <div class="auto-btn5"></div>
+                    <div class="auto-btn6"></div>
+                    <div class="auto-btn7"></div>
+                    <div class="auto-btn8"></div>
+                    <div class="auto-btn9"></div>
+                </div>
+            </div>
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <label for="radio5" class="manual-btn"></label>
+                <label for="radio6" class="manual-btn"></label>
+                <label for="radio7" class="manual-btn"></label>
+                <label for="radio8" class="manual-btn"></label>
+                <label for="radio9" class="manual-btn"></label>
+            </div>
+        </section>
+    </main>  
+    
+    <div class="espacamento"></div>
+
+    <main class="conteudo-final">
+        <section class="feedback">
+            <h1 class="titulo">Gostaríamos de saber a sua perspectiva</h1>
+            <div class= "frase-feedback">
+                <p>Compartilhe sua opinião e ajude-nos a aprimorar sua experiência aqui no IBIDEN. <br>Valorizamos suas sugestões para oferecer um serviço melhor.<br><br>Clique no botão abaixo e deixe seu feedback</p>
+            </div>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=veJyzyt6g0e96znVewf3bxP3XRBkcHFFkSY_Y_rmpwxUMDcxV1FQVklHQkVaUktUSzAzSUhRV1EzUC4u" target="_blank">
+                <div class="feedback-button">
+                    <button>FEEDBACK</button>
+                </div>
+            </a>
+            <section>
+                <div class="direitos">
+                    <h1>IBIDEN&reg;</h1>
+                    <p><br>&copy; 2023.<br>All rights reserved.</p>
+                </div>
+                <div class="tags">
+                    <h1>TAGS</h1>
+                    <p><br>mudanças climáticas   •   news<br>  •   previsão em tempo real</p>
+                </div>
+                <div class="about">
+                    <h1>ABOUT</h1>
+                <a href="{{ url_for('sobre_nos')}}">
+                    <div class="about-button">
+                        <button><p>Sobre nós</p></button>
+                    </div>
+                </a>
+            </section>                        
+        </section>
+    </main>
+    <!--Script para que os slides dos documentários passem sozinhos-->
+    <script>
+        let count = 1;
+        document.getElementById("radio1").checked = true;
+    
+        setInterval(function(){
+            nextImage();
+        }, 7000);
+    
+        function nextImage() {
+            count++;
+            if (count > 8) {
+                count = 1;
+            }
+
+            document.getElementById("radio" + count).checked = true;
+        }
+    </script>
+
+
+<script>
+   window.addEventListener('scroll', function() {
+    var header = document.getElementById('header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+</script>
+    </body>
+</html>

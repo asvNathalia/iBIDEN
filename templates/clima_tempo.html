@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../static/style-clima-tempo.css">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
+</head>
+<body>
+    <header class="cabecalho" id="header">
+    
+        <a href="#" class="logo">
+           <img src="../static/img/nuvem_dourada.png" alt="" class="logo">
+        </a>
+    
+     <nav class="navegacao-opcoes-menu">
+        <ul class="items-menu">
+            <li class="item"><a href= "{{ url_for('busca_clima')}}">Home</a></li>
+            <li class="item"><a href="{{ url_for('dengueinsight') }}">Dengue Insight</a></li>
+            <li class="item"><a href= "{{ url_for('buscar_impactos')}}">EcoDengue</a></li>
+            <li class="item"><a href= "{{ url_for('dashboard')}}">Dengue PBI</a></li>
+            <li class="item"><a href= "{{ url_for('manual')}}">Help</a></li>
+            <li class="item"><a href= "{{ url_for('sobre_nos')}}">About</a></li>
+        </ul>
+    </nav>
+    <div class="user-menu-container">
+        <img src="static/img/icone_usuario.png" alt="User Icon" class="user-icon">
+
+        <div class="user-menu">
+            <a href="{{ url_for('gerenciar_conta') }}">Gerenciar sua Conta</a>
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </div> 
+</header>
+
+<body>
+    <main class="conteudo-principal" id="projetos">
+        <section class="paineis">
+            <div class="pesquisa">
+                <div class="pesquisa">
+                    <form action="/get_weather" method="post">
+                        <input type="text" id="cidade" name="cidade" required placeholder="Digite a cidade, UF e descubra o Clima & Tempo" class="caixa-pesquisa">
+                        <input type="submit" value="Pesquisar">
+                    </form>
+                </div>                
+            </div>
+            </div>                
+            {% if error %}
+            <div class="error-message">
+                <p>{{ error }}</p>
+            </div>
+            {% endif %}
+            <div class="container">
+                <div class="temperature-and-square">
+                    {% if request.method == "POST" %}
+                    <h1>{{ request.form['cidade'] }}</h1>
+                    {% endif %}
+                    <h2>{{ temperatura }}°C</h2>
+                </div>
+            </div>
+            <div class= "container">
+                <div class="square">
+                    <h3>Índice uv<br></h3>
+                    <p><br>{{uv}}</p>
+                </div>
+                <div class="square">
+                    <h3> Velocidade do Vento<br></h3>
+                    <p><br>{{ velocidade_vento }} km/h</p>
+                </div>
+                <div class="square">
+                    <h3>Cobertura das Nuvens<br></h3>
+                    <p><br>{{cobertura_nuvens}} %</p>
+                </div>
+                <div class="square">
+                    <h3>Umidade<br></h3>
+                    <p><br>{{umidade}} %</p>
+                </div>      
+            </div>
+            <div class="container2">
+                <div class="square">
+                    <h3>Precipitação<br></h3>
+                    <p><br>{{precipitacao}} mm</p>
+                </div>
+                <div class="square">
+                    <h3>Pressão<br></h3>
+                    <p><br>{{pressao}} hPa</p>
+                </div>
+                <div class="square">
+                    <h3>Sensação<br></h3>
+                    <p><br>{{sensacao}} °C</p>
+                </div>
+                <div class="square">
+                    <h3>Visibilidade<br></h3>
+                    <p><br>{{visibilidade}} km</p>
+                </div>
+            </div>
+            <h4>fonte: https://www.weatherapi.com/</h4>
+        </section>
+    </main>
+    <script src="static/script_time.js"></script>
+    </script>
+</body>
+</html>

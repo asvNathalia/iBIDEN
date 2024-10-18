@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Somos uma empresa engajada com o Impacto causado pelas mudanças climáticas. Aqui você encontra os principais guias para o seu dia a dia, porque prever o futuro é coisa do presente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style-login.css') }}">
+    <title>iBIDEN</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/nuvem_dourada.png') }}">
+</head>
+<body class="body">
+    <form method="POST">
+        {% if mensagem == 1 %}
+            <p>Credenciais inválidas. <br> Por favor, tente novamente.</p>
+        {% elif mensagem == 2 %}
+            <p>Por favor, preencha todos os campos.</p>
+        {% endif %}
+        
+        <label for="usu_email">E-mail:</label>
+        <input type="text" name="usu_email" id="usu_email" required>
+
+        <label for="usu_pass">Senha:</label>
+        <input type="password" name="usu_pass" id="usu_pass" required>
+        <input type="submit" name="enviar" value="Acessar">
+        <br>
+        <a href="{{ url_for('registro')}}">Registre-se</a>
+  </form>
+</body>
+</html>

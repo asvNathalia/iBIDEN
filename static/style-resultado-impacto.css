@@ -1,0 +1,285 @@
+/* IMPLANTACAO DAS FONTES E RESET DA PAGINA, IMAGENS, ANCORAS E UL */
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER DA MINHA PAGINA */
+
+header {
+    background-color: rgb(38, 38, 38);
+    display: flex;
+    align-items: center;
+    width: 100%;
+ 
+}
+
+
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+    position: fixed;
+    background: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+.cabecalho.scrolled {
+    background-color: rgb(38, 38, 38);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo{
+    display: flex;
+    width: 96px;
+    height: auto;
+    margin-right: 350px;
+    margin-left: 5px;
+}
+
+
+
+.navegacao-opcoes-menu .items-menu {
+    display: flex;
+}
+
+.navegacao-opcoes-menu .items-menu .item {
+    margin: 10px;
+}
+
+.navegacao-opcoes-menu  .items-menu .item a {
+    padding: 15px;
+    font-family: "Varela Round", sans-serif;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+    transition: 0.2s ease-in-out;
+}
+
+.navegacao-opcoes-menu .items-menu .item a:hover {
+    background-color: #0e4dfb; ;
+    color: white;
+    border-radius: 12px 20px 4px;
+}
+
+.user-icon {
+    width: 60px; /* Define a largura */
+    height: 60px; /* Define a altura */
+    border-radius: 50%; /* Deixa o ícone circular, se for quadrado */
+    margin-top: 5px;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: -10px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 180px;
+}
+
+.user-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-menu-container:hover .user-menu {
+    display: block;
+}
+
+
+
+/*Estilo da pesquisa*/
+.pesquisa {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    margin-top: 0px; /* Adiciona um espaço superior para separar do título */
+}
+
+/* Estilizando a caixa de pesquisa */
+.caixa-pesquisa {
+    width: 400px; /* Reduzi a largura para acomodar o botão ao lado */
+    padding: 10px;
+    border-radius: 15px;
+    border-color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    margin-right: 10px; /* Adicionei uma margem à direita para separar do botão */
+    display: inline-block; /* Exibe a caixa de pesquisa em linha */
+    vertical-align: top; /* Alinha verticalmente ao topo */
+    margin-top: 50px;
+    margin-left: 400px;
+}
+
+
+/* Estilizando o botão de pesquisa */
+button[type="submit"] {
+    background-color: #ffffff; /* Cor de fundo do botão */
+    border: 0.5px solid #ffffff; /* Adiciona uma borda sólida ao botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 25px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Define o cursor como uma mão ao passar o mouse sobre o botão */
+    color: #000000; /* Cor do texto do botão */
+    margin-top: 20px;
+}
+
+/* Estilizando o ícone de pesquisa dentro do botão */
+button[type="submit"] i {
+    font-size: 20px; /* Define o tamanho da fonte do ícone */
+    margin-right: 5px; /* Adiciona um pequeno espaço à direita do ícone */
+}
+
+
+
+
+/* Estilo dos títulos */
+
+h1{
+    font-family: Arial, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 300px;
+    margin-top: 60px;
+    text-shadow: 1px 1px 2px #000000;
+}
+h2{
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 400px;
+    margin-top: 0px;
+    text-shadow: 1px 1px 2px #000000;
+}
+h3 {
+    font-family: Arial, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+/* Estilo dos links */
+.links {
+    text-decoration: none;
+    color: #98d4ff;
+    transition: color 0.2s ease-in-out;
+    margin-left: 50px
+}
+
+a:hover {
+    color: #0044cc;
+}
+
+/* Estilo dos snippets */
+p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    margin-left: 50px;
+}
+
+
+
+/* Estilo para os links de paginação como botões */
+.pagination-link {
+    display: inline-block;
+    padding: 10px 20px; /* Espaçamento interno para definir o tamanho do botão */
+    background-color: #0077cc; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    text-decoration: none; /* Remover sublinhado padrão dos links */
+    border: 1px solid #0077cc; /* Borda do botão */
+    border-radius: 4px; /* Cantos arredondados do botão */
+    transition: background-color 0.3s ease; /* Efeito de transição suave para a cor de fundo */
+    margin-right: 100px; /* Espaçamento à direita entre os botões */
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+/* Estilo para os links de paginação quando o cursor passar por cima */
+.pagination-link:hover {
+    background-color: #9fbaef; /* Altere a cor de fundo quando o cursor passar por cima */
+}
+
+
+
+/* Estilo para os títulos dos resultados */
+.result-title {
+    font-size: 1.2em; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
+    color: #020202; /* Cor do texto */
+    margin-bottom: 5px; /* Espaçamento inferior */
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+/* Estilo para os snippets dos resultados */
+.result-snippet {
+    font-size: 1em; /* Tamanho da fonte diferente para snippets */
+    color: #070707; /* Cor do texto diferente para snippets */
+    margin-bottom: 10px; /* Espaçamento inferior diferente para snippets */
+    margin-left: 110px;
+}
+.result-link {
+    font-size: 1em; /* Tamanho da fonte diferente para snippets */
+    color: #000000; /* Cor do texto diferente para snippets */
+    margin-bottom: 10px; /* Espaçamento inferior diferente para snippets */
+    margin-left: 110px;
+}
+
+.resultado {
+    position: relative;
+    background-image: url(img/destruicao-ambiental.jpg);
+    margin-top: -60px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    background-blend-mode: overlay;
+
+}
+
+.resultado::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Cor escura mais transparente */
+    mix-blend-mode: overlay; /* Aplica um efeito de sobreposição */
+    pointer-events: none; /* Permite interação com o conteúdo subjacente */
+}

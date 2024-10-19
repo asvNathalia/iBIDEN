@@ -1,0 +1,264 @@
+/* IMPLANTACAO DAS FONTES E RESET DA PAGINA, IMAGENS, ANCORAS E UL */
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER DA MINHA PAGINA */
+
+header {
+    background-color: rgb(38, 38, 38);
+    display: flex;
+    align-items: center;
+    width: 100%;
+ 
+}
+
+
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+    position: fixed;
+    background: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+
+.logo{
+    display: flex;
+    width: 96px;
+    height: auto;
+    margin-right: 350px;
+    margin-left: 5px;
+}
+
+
+
+.navegacao-opcoes-menu .items-menu {
+    display: flex;
+}
+
+.navegacao-opcoes-menu .items-menu .item {
+    margin: 10px;
+}
+
+.navegacao-opcoes-menu  .items-menu .item a {
+    padding: 15px;
+    font-family: "Varela Round", sans-serif;
+    font-size: 17px;
+    color: #000000;
+    font-weight: 400;
+    font-style: normal;
+    transition: 0.2s ease-in-out;
+}
+
+.navegacao-opcoes-menu .items-menu .item a:hover {
+    background-color: #0e4dfb; ;
+    color: white;
+    border-radius: 12px 20px 4px;
+}
+
+.user-icon {
+    width: 60px; /* Define a largura */
+    height: 60px; /* Define a altura */
+    border-radius: 50%; /* Deixa o ícone circular, se for quadrado */
+    margin-top: 5px;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: -10px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 180px;
+}
+
+.user-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-menu-container:hover .user-menu {
+    display: block;
+}
+
+
+/*MAPA*/
+#windy {
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+}
+
+
+/*Estilo para info*/
+
+.container {
+    float: right;
+    margin-right: 100px;
+    margin-top: 25px;
+}
+  
+.tooltip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 60px;
+  }
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: rgb(233, 232, 232);
+    text-align: left;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: 40px;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.tooltip.active .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+
+  }
+
+.tooltip .line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.tooltip .line::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    margin-right: 10px;
+}
+
+  
+.tooltip .line i {
+    margin-right: 10px;
+}
+
+
+
+
+/* Estilo para a seção de feedback */
+.feedback {
+    background-image: url('img/clima_mudanças.jpeg'); 
+    margin-top: 80px;
+    background-size: cover;
+    background-position: center;
+    padding: 60px; /* Espaçamento interno para melhor legibilidade */
+    color: #fff; /* Cor do texto na seção */
+    text-align: center; /* Centralizar o conteúdo na seção */
+}
+
+/* Estilo para o título dentro da seção de feedback */
+.feedback .titulo {
+    font-size: 36px; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #fff;
+}
+
+/* Estilo para a frase abaixo do título */
+.feedback .frase-feedback p {
+    font-size: 18px; /* Tamanho da fonte do texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do texto */
+    color: #ffffff
+}
+ /*Botão Feedback*/
+button {
+    background-color: #279100;
+    margin-top: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative; 
+    z-index: 1; /*para que o botão fique acima dos elementos abaixo */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.tags, .about{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Defina a largura desejada para cada div */
+    margin-top: 100px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+}
+
+.direitos{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Defina a largura desejada para cada div */
+    margin-top: 100px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    text-transform: capitalize;
+}
+
+.direitos::first-letter {
+    text-transform: lowercase;
+}
+.direitos p {
+    .first-letter-lowcase{
+        text-transform: lowercase;
+    }
+}
+
+.about-button{
+    background-color: transparent;
+    color: #ffffff; /* Cor do texto azul */
+    cursor: pointer;
+    font-size: 20px; /* Tamanho da fonte, ajuste conforme necessário */
+}

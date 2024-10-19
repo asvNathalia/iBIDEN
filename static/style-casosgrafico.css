@@ -1,0 +1,222 @@
+/* IMPLANTACAO DAS FONTES E RESET DA PAGINA, IMAGENS, ANCORAS E UL */
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER DA MINHA PAGINA */
+
+header {
+    background-color: rgb(38, 38, 38);
+    display: flex;
+    align-items: center;
+    width: 100%;
+ 
+}
+
+
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+    position: fixed;
+    background: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+.cabecalho.scrolled {
+    background-color: rgb(38, 38, 38);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo{
+    display: flex;
+    width: 96px;
+    height: auto;
+    margin-right: 350px;
+    margin-left: 5px;
+}
+
+
+
+.navegacao-opcoes-menu .items-menu {
+    display: flex;
+}
+
+.navegacao-opcoes-menu .items-menu .item {
+    margin: 10px;
+}
+
+.navegacao-opcoes-menu  .items-menu .item a {
+    padding: 15px;
+    font-family: "Varela Round", sans-serif;
+    font-size: 17px;
+    color: #000000;
+    font-weight: 400;
+    font-style: normal;
+    transition: 0.2s ease-in-out;
+}
+
+.navegacao-opcoes-menu .items-menu .item a:hover {
+    background-color: #0e4dfb; ;
+    color: white;
+    border-radius: 12px 20px 4px;
+}
+
+.user-icon {
+    width: 60px; /* Define a largura */
+    height: 60px; /* Define a altura */
+    border-radius: 50%; /* Deixa o ícone circular, se for quadrado */
+    margin-top: 5px;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: -10px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 180px;
+}
+
+.user-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-menu-container:hover .user-menu {
+    display: block;
+}
+
+
+/* PAINEL MAIN */
+.conteudo-principal .paineis {
+    position: relative;
+    height: 700px;
+    display: flex;
+    flex-direction: column; /* Ajuste a direção para coluna */
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    align-items: center; /* Mantém o conteúdo centralizado horizontalmente */
+
+}
+
+
+.conteudo-principal .paineis .imagem-painel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(110%);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    font-size: 20px;
+    margin-top: -200px;
+    margin:0;
+    padding: 0;
+}
+
+.conteudo-principal .paineis .imagem-painel.projeto1{
+    background-image: url('./img/fundo_azul_branco.jpg');
+}
+.imagem-painel {
+    margin: 0;
+    padding: 0;
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar{
+    opacity: 1;
+}
+
+h1 {
+    font-weight: bold;
+    margin-top: 80px;
+    color: floralwhite;
+    background-image: linear-gradient(to bottom, #0000ff, #00f, #0000ff); /* Tons de azul */
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: fire 1s infinite alternate;
+    text-shadow: 0 0 10px #0000ff, 0 0 10px #0000ff, /* Azul escuro */
+                 0 0 20px #0000cd, 0 0 20px #0000cd, /* Azul médio */
+                 0 0 30px #0000ff, 0 0 30px #0000ff, /* Azul escuro */
+                 0 0 40px #1e90ff, 0 0 40px #1e90ff, /* Azul claro */
+                 0 0 50px #00f, 0 0 50px #00f; /* Azul */
+    text-align: center;
+    margin-bottom: 20px; /* Ajuste a margem conforme necessário */
+}
+
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Alterado para linha para alinhar os elementos na horizontal */
+    margin-bottom: 20px; /* Espaçamento entre o formulário e o conteúdo abaixo */
+}
+
+select {
+    margin-right: 10px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #33459e; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+}
+
+
+
+.plot-container {
+    margin-top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2; /* Ajuste o z-index para um valor maior que o da imagem de fundo */
+    position: relative; /* Certifique-se de que o z-index funcione corretamente */
+}
+
+.plot-container div {
+    width: 100%;
+    margin-top: -5px; /* Você pode ajustar este valor conforme necessário */
+}
+
+

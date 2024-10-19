@@ -1,0 +1,290 @@
+/* IMPLANTACAO DAS FONTES E RESET DA PAGINA, IMAGENS, ANCORAS E UL */
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER DA MINHA PAGINA */
+
+header {
+    background-color: rgb(38, 38, 38);
+    display: flex;
+    align-items: center;
+    width: 100%;
+ 
+}
+
+
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+    position: fixed;
+    background: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+.cabecalho.scrolled {
+    background-color: rgb(38, 38, 38);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo{
+    display: flex;
+    width: 96px;
+    height: auto;
+    margin-right: 350px;
+    margin-left: 5px;
+}
+
+
+
+.navegacao-opcoes-menu .items-menu {
+    display: flex;
+}
+
+.navegacao-opcoes-menu .items-menu .item {
+    margin: 10px;
+}
+
+.navegacao-opcoes-menu  .items-menu .item a {
+    padding: 15px;
+    font-family: "Varela Round", sans-serif;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+    transition: 0.2s ease-in-out;
+}
+
+.navegacao-opcoes-menu .items-menu .item a:hover {
+    background-color: #0e4dfb; ;
+    color: white;
+    border-radius: 12px 20px 4px;
+}
+
+.user-icon {
+    width: 60px; /* Define a largura */
+    height: 60px; /* Define a altura */
+    border-radius: 50%; /* Deixa o ícone circular, se for quadrado */
+    margin-top: 5px;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: -10px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 180px;
+}
+
+.user-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-menu-container:hover .user-menu {
+    display: block;
+}
+
+
+.espacamento {
+    width: 100%;
+    height: 52px;
+    background-color: rgb(0, 23, 100);  
+}
+
+
+/* PAINEL MAIN */
+.conteudo-principal {
+    background: linear-gradient(to bottom, #499eff, #000); /* Degradê de azul escuro */
+    overflow: hidden;
+    position: relative;
+}
+
+
+.conteudo-principal .paineis{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    Flex-direction: column;
+    margin-top: -10px;
+}
+
+
+/* Estilizando o conteúdo da caixa de pesquisa */
+.pesquisa {
+    display: flex;
+    align-items: center; /* Alinhar verticalmente ao centro */
+}
+
+/* Estilizando o conteúdo da caixa de pesquisa */
+.pesquisa {
+    display: flex;
+    align-items: center;
+    margin-top: -80px;
+}
+
+/* Estilizando a caixa de pesquisa */
+.caixa-pesquisa {
+    width: 400px; /* A largura da caixa de pesquisa */
+    padding: 10px; /* Adiciona algum espaço interno para melhor aparência */
+    border-radius: 15px; /* Adiciona cantos arredondados */
+    border-color: #faf8f8;
+    text-align: center; /* Centraliza o conteúdo da caixa de pesquisa */
+    font-size: 16px; /* Define o tamanho da fonte */
+    margin-right: 10px;
+    display: inline-block; /* Alterado para inline-block */
+    margin-top: 150px;
+}
+
+/* Estilizando o botão de pesquisa */
+input[type="submit"] {
+    background-color: #051980; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    display: inline-block; /* Adicionado para alinhar horizontalmente com a caixa de pesquisa */
+}
+
+
+
+/* Estilizando o botão de pesquisa quando o mouse passa sobre ele */
+input[type="submit"]:hover {
+    background-color: #4d97e6; /* Cor de fundo alterada */
+}
+
+
+/*IMAGEM DE DIA E NOITE*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.main-dia {
+    background-image: url('/static/img/clima_dia.gif');
+}
+
+.main-noite {
+    background-image: url('/static/img/clima_noite.gif');
+}
+
+
+.conteudo-principal {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    transition: background-image 0.5s;
+}
+
+
+h1{
+    font-size: 30px;
+    margin-left: -50px;
+    display: flex;
+    color: #ffffff;
+    text-shadow: 0 0 10px #0000ff, 0 0 10px #0000ff, /* Azul escuro */
+    0 0 20px #0000cd, 0 0 20px #0000cd, /* Azul médio */
+    0 0 30px #0000ff, 0 0 30px #0000ff, /* Azul escuro */
+    0 0 40px #1e90ff, 0 0 40px #1e90ff, /* Azul claro */
+    0 0 50px #00f, 0 0 50px #00f; /* Azul */
+}
+
+h2{
+    font-size: 80px;
+    margin-left: -50px;
+    display: flex;
+    color: #ffffff;
+    -webkit-text-stroke: 2px black; 
+}
+h3{
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+}
+
+h4{
+    font-size: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    margin-top: 5px;
+}
+p{
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+}
+/*quadrados*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os blocos */
+    margin-top: 5px; /* Espaço entre os containers */
+    margin-left: 20px;
+}
+.container2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre os blocos */
+    margin-top: 10px; /* Espaço entre os containers */
+    margin-left: 20px;
+}
+
+
+.square {
+    width: 200px;
+    height: 150px;
+    background-color: rgba(1, 20, 114, 0.7);
+    margin-left: 20px; /* Centralizar à direita */
+    margin-right: 2px; /* Espaço entre os quadrados à direita */
+    flex: 1; /* Faz com que os blocos .square compartilhem o espaço disponível */
+    border: 1px solid #000; /* Apenas para destacar os blocos para fins de demonstração */
+    padding: 10px;
+    font-size: 10px;
+    border-radius: 20px;
+}
+
+.temperature-and-square {
+    display: flex;
+    flex-direction: column; /* Mude para coluna para empilhar elementos verticalmente */
+    align-items: center; /* Alinhar elementos centralmente */
+}

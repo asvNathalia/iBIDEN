@@ -1,0 +1,399 @@
+/* IMPLANTACAO DAS FONTES E RESET DA PAGINA, IMAGENS, ANCORAS E UL */
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER DA MINHA PAGINA */
+
+header {
+    background-color: rgb(38, 38, 38);
+    display: flex;
+    align-items: center;
+    width: 100%;
+ 
+}
+
+
+
+.cabecalho {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px;
+    position: fixed;
+    background: transparent;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+.cabecalho.scrolled {
+    background-color: rgb(38, 38, 38);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.logo{
+    display: flex;
+    width: 96px;
+    height: auto;
+    margin-right: 350px;
+    margin-left: 5px;
+}
+
+
+
+.navegacao-opcoes-menu .items-menu {
+    display: flex;
+}
+
+.navegacao-opcoes-menu .items-menu .item {
+    margin: 10px;
+}
+
+.navegacao-opcoes-menu  .items-menu .item a {
+    padding: 15px;
+    font-family: "Varela Round", sans-serif;
+    font-size: 17px;
+    color: #fff;
+    font-weight: 400;
+    font-style: normal;
+    transition: 0.2s ease-in-out;
+}
+
+.navegacao-opcoes-menu .items-menu .item a:hover {
+    background-color: #0e4dfb; ;
+    color: white;
+    border-radius: 12px 20px 4px;
+}
+
+.user-icon {
+    width: 60px; /* Define a largura */
+    height: 60px; /* Define a altura */
+    border-radius: 50%; /* Deixa o ícone circular, se for quadrado */
+    margin-top: 5px;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: -10px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 180px;
+}
+
+.user-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.user-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.user-menu-container:hover .user-menu {
+    display: block;
+}
+
+
+.espacamento {
+    width: 100%;
+    height: 52px;
+    background-color: rgb(0, 23, 100);  
+}
+
+/* PAINEL MAIN */
+.conteudo-principal .paineis{
+    position: relative;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    Flex-direction: column;
+}
+
+
+.conteudo-principal .paineis .imagem-painel{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(110%);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    font-size: 20px;
+}
+
+.frase-abaixo {
+    color: #ffffff; /* Cor do texto */
+    margin-top: 75px; /* Espaço superior para separar da caixa de pesquisa */
+    font-size: 20px; /* Define o tamanho da fonte */
+}
+
+.conteudo-principal .paineis .imagem-painel.projeto1{
+    background-image: url('./img/nuvem_mosquitos.gif');
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar{
+    opacity: 1;
+}
+
+
+.conteudo-principal .paineis .titulo{ /*para que o iBIDEN fique só com a 1° minuscula*/
+    .first-letter-lowcase{
+        text-transform: lowercase;
+    }
+    .first-letter-lowcase::first-letter{
+    text-transform: uppercase;
+    }
+    color: #ffffff;
+    font-size: calc(2em + 2vw);
+}
+body {
+    text-align: center;
+    margin: 100;
+    padding: 100;
+}
+
+/* Estilizando o conteúdo da caixa de pesquisa */
+.pesquisa {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    margin-top: 20px; /* Adiciona um espaço superior para separar do título */
+}
+
+/* Estilizando a caixa de pesquisa */
+.caixa-pesquisa {
+    width: 550px; /* A largura da caixa de pesquisa */
+    padding: 10px; /* Adiciona algum espaço interno para melhor aparência */
+    border-radius: 15px; /* Adiciona cantos arredondados */
+    border-color: #faf8f8;
+    text-align: center; /*Centraliza o conteúdo da caixa de pesquisa*/
+    font-size: 16px; /* Define o tamanho da fonte */
+}
+
+
+/* Estilizando o botão de pesquisa */
+input[type="submit"] {
+    background-color: #33459e; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border-radius: 5px; /* Cantos arredondados do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse sobre o botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    margin-top: 10px; /* Espaço superior para separar da caixa de pesquisa */
+}
+
+/* Estilizando o botão de pesquisa quando o mouse passa sobre ele */
+input[type="submit"]:hover {
+    background-color: #4d97e6; /* Cor de fundo alterada */
+}
+
+/*noticias ibiden*/
+.titulo-noticias{
+    margin-top: 60px;
+    font-size: 30px;
+    color: #000000;
+    text-shadow: 1px 1px 1px #a2a2a2;
+}
+
+h2{
+    font-size: 20px;    
+}
+
+/*Estilo para os slides da noticia*/
+.noticias{
+    margin: 0 auto;
+    width: 800px;
+    height: 800px;
+    overflow: hidden;
+    margin-top: -20px;
+}
+
+.cinema-ibiden{
+    background-image: url('img/fundo_azul_branco.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+.slides-noticias{
+    width: 400%;
+    height: 400px;
+    display: flex;
+    
+}
+.slides-noticias input{
+    display: none;
+}
+.slide {
+    width: 30%;
+    position: relative;
+    border-radius: 20px;
+    transition: 5s;
+}
+
+.slide img{
+    width: 800px;
+    border-radius: 20px;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #060505;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 10px;
+}
+
+.manual-btn:hover{
+    background-color: #6df977;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+#radio5:checked ~ .first{
+    margin-left: -100%;
+}
+
+#radio6:checked ~ .first{
+    margin-left: -125%;
+}
+
+#radio7:checked ~ .first{
+    margin-left: -150%;
+}
+
+#radio8:checked ~ .first{
+    margin-left: -175%;
+}
+
+
+/* Estilo para a seção de feedback */
+.feedback {
+    background-image: url('img/clima_mudanças.jpeg'); 
+    margin-top: -10px;
+    background-size: cover;
+    background-position: center;
+    padding: 60px; /* Espaçamento interno para melhor legibilidade */
+    color: #fff; /* Cor do texto na seção */
+    text-align: center; /* Centralizar o conteúdo na seção */
+}
+
+/* Estilo para o título dentro da seção de feedback */
+.feedback .titulo {
+    font-size: 36px; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    color: #fff;
+}
+
+/* Estilo para a frase abaixo do título */
+.feedback .frase-feedback p {
+    font-size: 18px; /* Tamanho da fonte do texto */
+    margin-bottom: 20px; /* Espaçamento abaixo do texto */
+    color: #ffffff
+}
+ /*Botão Feedback*/
+button {
+    background-color: #279100;
+    margin-top: 20px;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative; 
+    z-index: 1; /*para que o botão fique acima dos elementos abaixo */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.tags, .about{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Defina a largura desejada para cada div */
+    margin-top: 100px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+}
+
+.direitos{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%; /* Defina a largura desejada para cada div */
+    margin-top: 100px;
+    margin-left: 10px; 
+    margin-right: 10px; 
+    text-transform: capitalize;
+}
+
+.direitos::first-letter {
+    text-transform: lowercase;
+}
+.direitos p {
+    .first-letter-lowcase{
+        text-transform: lowercase;
+    }
+}
+
+.about-button{
+    background-color: transparent;
+    color: #ffffff; /* Cor do texto azul */
+    cursor: pointer;
+    font-size: 20px; /* Tamanho da fonte, ajuste conforme necessário */
+}
+

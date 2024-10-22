@@ -46,7 +46,7 @@ class Conectar:
                 usu_id SERIAL PRIMARY KEY,
                 usu_nome VARCHAR(150) NOT NULL,
                 usu_email VARCHAR(150) NOT NULL UNIQUE,
-                usu_pass VARCHAR(10) NOT NULL,
+               usu_pass VARCHAR(100) NOT NULL,
                 estado INT NOT NULL CHECK (estado IN (0, 1)) -- 1 = ATIVO // 0 = INATIVO
             );
             """
@@ -109,32 +109,40 @@ class Usuario(Conectar):
                     return 1  # Credenciais inválidas
 
         return None
-    
+   
     # Método para registrar um novo usuário
     def registrar_usuario(self, nome, email, password):
         conectar = super().Conexao()
+        try:
+            # Verifica se o email já está registrado
+            with conectar.cursor() as cursor:
+                print(f"Verificando se o email {email} já está em uso.")  # Depuração
+                sql_verificar = "SELECT * FROM usuario WHERE usu_email = %s"
+                cursor.execute(sql_verificar, (email,))
+                resultado = cursor.fetchone()
 
-        # Verifica se o email já está registrado
-        with conectar.cursor() as cursor:
-            sql_verificar = "SELECT * FROM usuario WHERE usu_email = %s"
-            cursor.execute(sql_verificar, (email,))
-            resultado = cursor.fetchone()
-
-            if resultado:
-                return False  # O email já está em uso
-            else:
-                # Insere o novo usuário no banco de dados
-                sql_inserir = "INSERT INTO usuario (usu_nome, usu_email, usu_pass, estado) VALUES (%s, %s, %s, 1)"
-                try:
+                if resultado:
+                    print("Email já registrado.")  # Depuração
+                    return False  # O email já está em uso
+                else:
+                    print("Inserindo novo usuário no banco de dados.")  # Depuração
+                    # Insere o novo usuário no banco de dados
+                    sql_inserir = """
+                    INSERT INTO usuario (usu_nome, usu_email, usu_pass, estado)
+                    VALUES (%s, %s, %s, 1)
+                    RETURNING usu_id;
+                    """
                     cursor.execute(sql_inserir, (nome, email, password,))
+                    novo_usuario_id = cursor.fetchone()[0]
                     conectar.commit()
-                    print("Usuário registrado com sucesso!")  # Mensagem de sucesso
+                    print(f"Usuário registrado com sucesso! ID: {novo_usuario_id}")  # Mensagem de sucesso
                     return True  # Registro bem-sucedido
-                except Exception as e:
-                    print("Erro ao inserir o usuário:", e)  # Mensagem de erro
-                    conectar.rollback()  # Reverte a transação em caso de erro
-                    return False
-    
+
+        except Exception as e:
+            print("Erro ao registrar o usuário:", e)  # Mensagem de erro
+            conectar.rollback()  # Reverte a transação em caso de erro
+            return False
+
     # Método para verificar o email
     def check_email(self, email):
         conectar = super().Conexao()
@@ -181,14 +189,15 @@ def login():
 
 @app.route('/registro', methods=["GET", "POST"])
 def registro():
-    mensagem = None
+    mensagem = None  # Inicializa a variável mensagem
     if request.method == "POST":
         print("Formulário Recebido:", request.form)  
-        if "enviar" in request.form and request.form["enviar"] == "Registrar":  
-            nome = request.form["usu_nome"]
-            email = request.form["usu_email"]
-            password = request.form["usu_pass"]
+        if "enviar" in request.form and request.form["enviar"] == "Registrar-se no iBIDEN":  
+            nome = request.form.get("usu_nome")  # Usando get para evitar UnboundLocalError
+            email = request.form.get("usu_email")
+            password = request.form.get("usu_pass")
             print(f"Nome: {nome}, Email: {email}, Senha: {password}")  # Debugging
+            
             if not nome or not email or not password:
                 mensagem = "Todos os campos são obrigatórios."
             else:
@@ -198,8 +207,8 @@ def registro():
                     mensagem = "Usuário registrado com sucesso!"
                 else:
                     mensagem = "O email já está em uso. Tente outro."
+    
     return render_template('registro.html', mensagem=mensagem)
-
 
 
 

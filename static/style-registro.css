@@ -35,9 +35,15 @@ label{
 
 
 .registration-form p {
-    color: #ea0707; /* Cor do texto */
-    font-size: 14px; /* Tamanho da fonte */
+    
+    color: #ffffff; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
     margin-top: 0px; /* Espaçamento acima do parágrafo */
+    text-shadow: 0 0 10px #0000ff, 0 0 10px #0000ff, /* Azul escuro */
+                 0 0 20px #0000cd, 0 0 20px #0000cd, /* Azul médio */
+                 0 0 30px #0000ff, 0 0 30px #0000ff, /* Azul escuro */
+                 0 0 40px #1e90ff, 0 0 40px #1e90ff, /* Azul claro */
+                 0 0 50px #00f, 0 0 50px #00f; /* Azul */
 }
 
 .registration-form h2 {

@@ -7,7 +7,7 @@
         <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
         <link rel="stylesheet" href="../static/style-busca-clima.css">
     </head>
-    <body>
+<body>
         <header class="cabecalho" id="header">
     
             <a href="#" class="logo">
@@ -194,8 +194,51 @@
             document.getElementById("radio" + count).checked = true;
         }
     </script>
+    
+    <div class="chatbot-toggle" id="chatbot-toggle" aria-label="Abrir Chatbot" style="display: flex; flex-direction: column; align-items: center;">
+            <img src="static/img/nuvem_mosquito.png" alt="Ícone do Chat" style="width: 80px; height: 80px; margin-top: 5px;"> <!-- Ajuste o caminho se necessário -->
+    </div>
+    <div class="chat-container" id="chat-container">
+        <div class="chat-header">
+            <h3>ChatiBIDEN</h3>
+            <span class="close-btn" id="close-btn" style="cursor: pointer;">&times;</span>
+        </div>
+    <div class="chat-box" id="chat-box">
+        <div class="message bot-message">
+            👋 Olá! Sou o ChatiBIDEN, pronto para te ajudar a entender mais sobre o clima e os casos de dengue! 
+            Como posso te ajudar hoje? Escolha uma das opções abaixo ou insira sua pergunta para começar:
+            <ul id="main-options">
+                <li><a href="{{ url_for('busca_clima')}}">Ver dados climáticos 🌦️</a></li>
+                <li><a href="{{ url_for('dengueinsight')}}">Visualizar Métricas da Dengue 🦟</a></li>
+                <li><a href="{{ url_for('casosgrafico')}}">Previsão da Dengue 🚨</a></li>
+                <li><a href="{{ url_for('buscar_impactos')}}">Saber mais sobre Impactos Ambientais 🔥</a></li>
+                <li><a href="{{ url_for('mapadengue')}}">Mapa da Dengue no Brasil 🌎</a></li>
+                <li><a href="{{ url_for('dashboard')}}">Acessar Dashboard 📈</a></li>
+                <li><a class="option-btn" href="#" onclick="showSubOptions()">Explicação do Dashboard 👨‍🏫</a></li>
+            </ul>
+        </div>
+
+        <!-- Sub-opções ocultas inicialmente -->
+        <div class="sub-options" id="sub-options" style="display: none;">
+            <p>Escolha uma das opções abaixo para continuar:</p>
+            <button onclick="explainTopic('aumento-temperatura')">Aumento da Temperatura 🌡️</button>
+            <button onclick="explainTopic('dengue-e-clima')">Dengue e Clima 🦟</button>
+            <button onclick="explainTopic('dengue-e-chuva')">Dengue e Chuva 🌧️🦟</button>
+            <button onclick="explainTopic('como-se-proteger')">Como se Proteger 🧴</button>
+            <a class="option" href="#" onclick="goBack()">Voltar</a>
+        </div>
+    </div>
+
+        <div class="input-container">
+            <input type="text" id="user-input" class="input-field" placeholder="Digite sua mensagem..." aria-label="Campo de mensagem">
+            <button class="send-btn" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
 
 
+    <script src="static/script_chat.js"></script>
+
+      
 <script>
    window.addEventListener('scroll', function() {
     var header = document.getElementById('header');
@@ -207,5 +250,6 @@
 });
 
 </script>
-    </body>
+
+</body>
 </html>

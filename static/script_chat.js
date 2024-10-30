@@ -8,35 +8,71 @@ const userInput = document.getElementById('user-input');
 // Inicia o chatbot fechado
 chatContainer.style.display = 'none';
 
+
 chatToggle.addEventListener('click', () => {
     if (chatContainer.style.display === 'block') {
         chatContainer.style.display = 'none';
     } else {
         chatContainer.style.display = 'block';
-        options.style.display = 'block'; // Show options when opening
-        subOptions.style.display = 'none'; // Hide sub-options when opening
-        userInput.value = ''; // Clear input field
+        options.style.display = 'block'; // Mostra opções ao abrir
+        subOptions.style.display = 'none'; // Oculta sub-opções ao abrir
+        userInput.value = ''; // Limpa campo de entrada
+        mainOptions.style.display = 'block'; // Assegura que as opções principais estejam visíveis
     }
 });
 
+
+
 closeBtn.addEventListener('click', () => {
     chatContainer.style.display = 'none';
-    options.style.display = 'none'; // Hide options when closing
-    subOptions.style.display = 'none'; // Hide sub-options when closing
+    options.style.display = 'none'; // Oculta opções ao fechar
+    subOptions.style.display = 'none'; // Oculta sub-opções ao fechar
 });
 
+
+function showMainOptions() {
+    options.style.display = 'block'; // Mostra as opções principais
+    subOptions.style.display = 'none'; // Oculta as sub-opções
+}
+
+function showInitialMessage() {
+    const initialMessage = `
+        👋 Olá! Sou o ChatiBIDEN, pronto para te ajudar a entender mais sobre o clima e os casos de dengue! 
+        Como posso te ajudar hoje? Escolha uma das opções abaixo ou digite <strong>Dengue</strong> para começar:
+        <ul id="main-options">
+            <li><a href="{{ url_for('busca_clima')}}">Ver dados climáticos 🌦️</a></li>
+            <li><a href="{{ url_for('dengueinsight')}}">Visualizar Métricas da Dengue 🦟</a></li>
+            <li><a href="{{ url_for('casosgrafico')}}">Previsão da Dengue 🚨</a></li>
+            <li><a href="{{ url_for('buscar_impactos')}}">Saber mais sobre Impactos Ambientais 🔥</a></li>
+            <li><a href="{{ url_for('mapadengue')}}">Mapa da Dengue no Brasil 🌎</a></li>
+            <li><a href="{{ url_for('dashboard')}}">Acessar Dashboard 📈</a></li>
+            <li><a class="option-btn" href="#" onclick="showSubOptions()">Explicação do Dashboard 👨‍🏫</a></li>
+        </ul>
+    `;
+    
+    addMessage('bot', initialMessage); // Adiciona a mensagem inicial ao chat
+}
 
 let currentContext = '';
 
 function generateBotResponse(message) {
     const lowerMessage = message.toLowerCase();
 
-    // Função para verificar múltiplas palavras-chave
     const includesKeywords = (keywords) => keywords.some(keyword => lowerMessage.includes(keyword));
+
+    if (includesKeywords(['menu', 'voltar pro menu', 'voltar', 'menu principal', 'principal'])) {
+        // Limpa o chat antes de mostrar as opções
+        const chatBox = document.getElementById('chat-box');
+        chatBox.innerHTML = ''; // Limpa todas as mensagens do chat
+        currentContext = ''; // Reseta o contexto
+        showInitialMessage(); // Adiciona a mensagem inicial
+        showMainOptions(); // Exibe as opções principais
+        return; // Termina a execução aqui
+    }
 
     // Respostas com base no contexto atual
     if (currentContext === 'sintomas' && includesKeywords(['como se proteger', 'prevenção', 'proteger'])) {
-        addMessage('bot', 'Para se proteger da dengue, é importante eliminar água parada, usar repelentes e evitar locais com alta incidência de mosquitos. Você gostaria de saber sobre <strong>medidas de controle</strong>?');
+        addMessage('bot', 'Para se proteger da dengue, é importante eliminar água parada, usar repelentes e evitar locais com alta incidência de mosquitos. Para saber mais digite <strong>medidas de controle</strong>');
         currentContext = 'proteção';
         return;
     } else if (currentContext === 'sintomas' && includesKeywords(['sintomas graves', 'graves'])) {
@@ -44,7 +80,7 @@ function generateBotResponse(message) {
         currentContext = ''; // Finaliza o contexto após a resposta completa
         return;
     } else if (currentContext === 'proteção' && includesKeywords(['medidas de controle', 'controle', 'controle mosquito'])) {
-        addMessage('bot', 'As medidas de controle incluem o uso de inseticidas e a limpeza de locais onde o mosquito possa se reproduzir. Você gostaria de saber mais sobre <strong>como colaborar</strong>?');
+        addMessage('bot', 'As medidas de controle incluem o uso de inseticidas e a limpeza de locais onde o mosquito possa se reproduzir. Para saber mais digite <strong>como colaborar</strong>');
         currentContext = 'controle';
         return;
     } else if (currentContext === 'controle') {
@@ -53,7 +89,7 @@ function generateBotResponse(message) {
             currentContext = 'dúvidas'; // Agora estamos no contexto de dúvidas
             return;
         } else if (includesKeywords(['não'])) {
-            addMessage('bot', 'Obrigado pela conversa! Se precisar de mais informações, estarei por aqui. Tenha um bom dia!');
+            addMessage('bot', 'Obrigado pela conversa! 😊 Se precisar de mais informações, estarei por aqui! Caso queira voltar para o menu inicial, digite "menu"');
             currentContext = ''; // Finaliza o contexto
             return;
         }
@@ -76,43 +112,28 @@ function generateBotResponse(message) {
         addMessage('bot', 'O tratamento é geralmente sintomático, com hidratação e medicamentos. Posso ajudar com mais alguma coisa?');
         currentContext = ''; // Finaliza o contexto após a resposta completa
     } else if (includesKeywords(['transmissão', 'transmitir'])) {
-        addMessage('bot', 'A dengue é transmitida principalmente pelo mosquito Aedes aegypti. Você gostaria de saber mais sobre <strong>como evitar picadas</strong>?');
+        addMessage('bot', 'A dengue é transmitida principalmente pelo mosquito Aedes aegypti. Para saber mais, digite <strong>como evitar picadas</strong>');
         currentContext = 'transmissão';
     } else if (includesKeywords(['sintomas graves', 'grave', 'complicações'])) {
         addMessage('bot', 'Os sintomas graves da dengue incluem sangramentos, dor abdominal intensa e dificuldade para respirar. É importante procurar atendimento médico imediatamente. Posso ajudar com mais alguma informação?');
         currentContext = ''; // Finaliza o contexto após a resposta completa
     } else if (includesKeywords(['medidas de controle', 'medidas', 'medida','controle', 'controle mosquito', 'controle da dengue', 'controle dengue'])) {
-        addMessage('bot', 'As medidas de controle incluem o uso de inseticidas e a limpeza de locais onde o mosquito possa se reproduzir. Você gostaria de saber mais sobre <strong>como colaborar</strong>?');
+        addMessage('bot', 'As medidas de controle incluem o uso de inseticidas e a limpeza de locais onde o mosquito possa se reproduzir. Para saber mais, digite <strong>como colaborar</strong>');
         currentContext = 'controle';
     } else if (includesKeywords(['como colaborar', 'ajudar', 'colaboração'])) {
         addMessage('bot', 'Você pode colaborar informando a sua comunidade sobre a importância de eliminar água parada e reportando focos do mosquito. Alguma outra dúvida?');
         currentContext = 'dúvidas';
     } else if (includesKeywords(['sim'])) {
-        addMessage('bot', 'Você pode me perguntar sobre <strong>dengue</strong>, <strong>sintomas</strong>, <strong>prevenção</strong>, <strong>tratamento</strong>, <strong>controle da dengue</strong>,<strong>transmissão</strong>, ou <strong>vacinação</strong>.');
+        addMessage('bot', 'Você pode me perguntar sobre <strong>dengue</strong>, <strong>sintomas</strong>, <strong>prevenção</strong>, <strong>tratamento</strong>, <strong>controle da dengue</strong>, <strong>transmissão</strong>, ou <strong>vacinação</strong>.');
         currentContext = '';
 
     } else if (includesKeywords(['não', 'nao'])) {
-        addMessage('bot', 'Obrigado pela conversa! Se precisar de mais informações, estarei por aqui. 😉!');
-            currentContext = ''; // Finaliza o contexto
+        addMessage('bot', 'Obrigado pela conversa! Se precisar de mais informações, estarei por aqui. 😉! Para voltar ao menu principal, digite "menu"');
+        currentContext = ''; // Finaliza o contexto
     }
     else {
-        addMessage('bot', 'Desculpe, não entendi. Você pode me perguntar sobre <strong>dengue</strong>, <strong>sintomas</strong>, <strong>prevenção</strong>, <strong>tratamento</strong>, <strong>transmissão</strong> ou <strong>vacinação</strong>.');
+        addMessage('bot', 'Desculpe, não entendi. Você pode me perguntar sobre <strong>dengue</strong>, <strong>sintomas</strong>, <strong>prevenção</strong>, <strong>tratamento</strong>, <strong>transmissão</strong> ou <strong>vacinação</strong>. Ou digite "menu" para voltar ao menu principal.');
         currentContext = ''; // Reseta o contexto em caso de erro
-    }
-}
-
-
-// Funções para responder às perguntas adicionais
-function handleUserResponse(userResponse) {
-    const lowerResponse = userResponse.toLowerCase();
-    if (lowerResponse.includes('sim')) {
-        // Implementar respostas para "sim"
-        addMessage('bot', 'Ótimo! O que você gostaria de saber especificamente?');
-    } else if (lowerResponse.includes('não')) {
-        // Implementar respostas para "não"
-        addMessage('bot', 'Tudo bem! Se tiver mais perguntas, estou aqui para ajudar.');
-    } else {
-        addMessage('bot', 'Desculpe, não entendi. Você pode responder com "sim" ou "não"?');
     }
 }
 
@@ -201,8 +222,6 @@ function sendMessage() {
     }
 }
 
-
-
 function toggleExplanation() {
     const mainOptions = document.getElementById('main-options');
     const subOptions = document.getElementById('sub-options');
@@ -227,3 +246,10 @@ document.getElementById('sendButton').onclick = function() {
 };
 
 document.getElementById('sendButton').addEventListener('click', sendMessage);
+
+// Permite enviar a mensagem pressionando "Enter"
+userInput.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+});

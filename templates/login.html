@@ -11,21 +11,25 @@
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/nuvem_dourada.png') }}">
 </head>
 <body class="body">
-    <form method="POST">
+
+    <form method="POST" class="registration-form">
         {% if mensagem == 1 %}
             <p>Credenciais inválidas. <br> Por favor, tente novamente.</p>
         {% elif mensagem == 2 %}
             <p>Por favor, preencha todos os campos.</p>
         {% endif %}
-        
-        <label for="usu_email">E-mail:</label>
-        <input type="text" name="usu_email" id="usu_email" required>
 
-        <label for="usu_pass">Senha:</label>
-        <input type="password" name="usu_pass" id="usu_pass" required>
-        <input type="submit" name="enviar" value="Acessar">
-        <br>
-        <a href="{{ url_for('registro')}}">Registre-se</a>
-  </form>
+        <label for="usu_email">Email:</label><br>
+        <input type="text" id="usu_email" name="usu_email" required><br><br>
+        
+        <label for="usu_pass">Senha:</label><br>
+        <input type="password" id="usu_pass" name="usu_pass" required><br><br>        
+        <div class="button-and-text">
+            <input type="submit" name="enviar" value="Acessar">         
+        </div>
+        <div class="button-container">
+            <a href="{{ url_for('registro')}}">Registre-se</a>
+        </div>
+    </form>
 </body>
 </html>

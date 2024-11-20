@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iBIDEN</title>
     <link rel="icon" type="image/png" href="static/img/nuvem_dourada.png">
-    <link rel="stylesheet" href="../static/style-indexx.css">
+    <link rel="stylesheet" href="../static/style-index.css">
 </head>
 <body>
     <header class="cabecalho" id="header">
@@ -142,7 +142,7 @@
         <div class="footer-left">
             <p><i class=""></i><br>Brazil, São Paulo</p>
             <p><i class=""></i></p>
-            <p><i class=""></i>ibiden.com</p>
+            <p><i class=""></i>ibidenoficial.onrender.com</p>
         </div>
         <div class="footer-right">
             <h4>iBIDEN</h4>
@@ -167,6 +167,17 @@
     }
 });
 
+    // Criar o botão no JavaScript
+    const menuToggle = document.createElement("button");
+    menuToggle.classList.add("menu-toggle");
+    menuToggle.innerHTML = "☰";
+    document.querySelector(".cabecalho").appendChild(menuToggle);
+
+    // Alternar visibilidade do menu
+    menuToggle.addEventListener("click", function () {
+        const menu = document.querySelector(".navegacao-opcoes-menu");
+        menu.classList.toggle("show");
+    });
 </script>
 
 </body>

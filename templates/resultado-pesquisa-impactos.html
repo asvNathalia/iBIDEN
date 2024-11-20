@@ -141,6 +141,28 @@
     }
 });
 </script>
+<script>
 
+// script.js
+
+function toggleMenu() {
+    const menuItems = document.querySelector('.items-menu');
+    const userMenuContainer = document.querySelector('.user-menu-container');
+
+    menuItems.classList.toggle('active');
+    userMenuContainer.classList.toggle('active');
+}
+    // Criar o botão no JavaScript
+    const menuToggle = document.createElement("button");
+    menuToggle.classList.add("menu-toggle");
+    menuToggle.innerHTML = "☰";
+    document.querySelector(".cabecalho").appendChild(menuToggle);
+
+    // Alternar visibilidade do menu
+    menuToggle.addEventListener("click", function () {
+        const menu = document.querySelector(".navegacao-opcoes-menu");
+        menu.classList.toggle("show");
+    });
+</script>
 </body>
 </html>

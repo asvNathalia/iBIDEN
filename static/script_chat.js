@@ -71,15 +71,15 @@ function generateBotResponse(message) {
     }
 
     // Respostas com base no contexto atual
-    if (currentContext === 'sintomas' && includesKeywords(['como se proteger', 'prevenção', 'proteger'])) {
+    if (currentContext === 'sintomas' && includesKeywords(['como se proteger', 'prevenção', 'proteger', 'se proteger'])) {
         addMessage('bot', 'Para se proteger da dengue, é importante eliminar água parada, usar repelentes e evitar locais com alta incidência de mosquitos. Para saber mais digite <strong>medidas de controle</strong>');
         currentContext = 'proteção';
         return;
-    } else if (currentContext === 'sintomas' && includesKeywords(['sintomas graves', 'graves'])) {
+    } else if (currentContext === 'sintomas' && includesKeywords(['quais sãos os sintomas?', 'quais sao os sintomais', 'sintomas graves', 'graves'])) {
         addMessage('bot', 'Os sintomas graves da dengue incluem sangramentos, dor abdominal intensa e dificuldade para respirar. É importante procurar atendimento médico imediatamente. Posso ajudar com mais alguma informação?');
         currentContext = ''; // Finaliza o contexto após a resposta completa
         return;
-    } else if (currentContext === 'proteção' && includesKeywords(['medidas de controle', 'controle', 'controle mosquito'])) {
+    } else if (currentContext === 'proteção' && includesKeywords(['medidas de controle', 'controle', 'controle mosquito', 'quais sao as medidas?', 'quais são as medidas?', 'O que são as medidas de controle?'])) {
         addMessage('bot', 'As medidas de controle incluem o uso de inseticidas e a limpeza de locais onde o mosquito possa se reproduzir. Para saber mais digite <strong>como colaborar</strong>');
         currentContext = 'controle';
         return;
@@ -96,31 +96,31 @@ function generateBotResponse(message) {
     }
 
     // Respostas gerais (fora de um contexto específico)
-    if (includesKeywords(['dengue', 'doença', 'mosquito'])) {
+    if (includesKeywords(['dengue', 'doença', 'mosquito', 'o que é dengue?', 'o que é dengue', 'o que é a dengue?'])) {
         addMessage('bot', 'A dengue é uma doença viral. Você gostaria de saber mais sobre <strong>sintomas</strong>, <strong>prevenção</strong>, <strong>vacinação</strong> ou <strong>transmissão</strong>?');
         currentContext = '';
-    } else if (includesKeywords(['sintoma', 'sintomas'])) {
+    } else if (includesKeywords(['sintoma', 'sintomas', 'quais são os sintomas?', 'quais os sintomas?'])) {
         addMessage('bot', 'Os sintomas da dengue incluem febre alta, dores de cabeça e dores no corpo. Você gostaria de saber <strong>como se proteger</strong> ou <strong>quais são os sintomas graves</strong>?');
         currentContext = 'sintomas';
-    } else if (includesKeywords(['prevenção', 'prevenir'])) {
+    } else if (includesKeywords(['prevenção', 'prevenir', 'como se prevenir?'])) {
         addMessage('bot', 'A prevenção inclui eliminar água parada e usar repelentes. Tem interesse em saber mais sobre <strong>tratamento</strong>, <strong>vacinação</strong> ou <strong>medidas de controle</strong>?');
         currentContext = 'prevenção';
-    } else if (includesKeywords(['vacinação', 'vacina'])) {
+    } else if (includesKeywords(['vacinação', 'vacina', 'o que é vacina', 'existe vacina?'])) {
         addMessage('bot', 'A vacina contra a dengue é importante para prevenir a doença. Atualmente, existem várias vacinas disponíveis contra a dengue. A vacinação é recomendada para pessoas que vivem em áreas de risco. Se precisar de mais informações, estarei por aqui. Alguma outra dúvida?');
         currentContext = 'vacinação';
-    } else if (includesKeywords(['tratamento', 'curar', 'cura'])) {
+    } else if (includesKeywords(['tratamento', 'curar', 'cura', 'qual é o tratamento?', 'qual o tratamento?', 'como tratar a dengue?', 'como curar?', 'qual a cura?', 'tem tratamento?', 'como é o tratamento?'])) {
         addMessage('bot', 'O tratamento é geralmente sintomático, com hidratação e medicamentos. Posso ajudar com mais alguma coisa?');
         currentContext = ''; // Finaliza o contexto após a resposta completa
-    } else if (includesKeywords(['transmissão', 'transmitir'])) {
+    } else if (includesKeywords(['transmissão', 'transmitir', 'como é transmitido?', 'como ocorre a transmissão?'])) {
         addMessage('bot', 'A dengue é transmitida principalmente pelo mosquito Aedes aegypti. Para saber mais, digite <strong>como evitar picadas</strong>');
         currentContext = 'transmissão';
-    } else if (includesKeywords(['sintomas graves', 'grave', 'complicações'])) {
+    } else if (includesKeywords(['sintomas graves', 'grave', 'complicações', 'quais são as complicações?', 'quais os sintomas graves?'])) {
         addMessage('bot', 'Os sintomas graves da dengue incluem sangramentos, dor abdominal intensa e dificuldade para respirar. É importante procurar atendimento médico imediatamente. Posso ajudar com mais alguma informação?');
         currentContext = ''; // Finaliza o contexto após a resposta completa
     } else if (includesKeywords(['medidas de controle', 'medidas', 'medida','controle', 'controle mosquito', 'controle da dengue', 'controle dengue'])) {
         addMessage('bot', 'As medidas de controle incluem o uso de inseticidas e a limpeza de locais onde o mosquito possa se reproduzir. Para saber mais, digite <strong>como colaborar</strong>');
         currentContext = 'controle';
-    } else if (includesKeywords(['como colaborar', 'ajudar', 'colaboração'])) {
+    } else if (includesKeywords(['como colaborar', 'ajudar', 'colaboração', 'como posso ajudar?', 'como posso colaborar?', 'meios de colaboração'])) {
         addMessage('bot', 'Você pode colaborar informando a sua comunidade sobre a importância de eliminar água parada e reportando focos do mosquito. Alguma outra dúvida?');
         currentContext = 'dúvidas';
     } else if (includesKeywords(['sim'])) {

@@ -4,7 +4,7 @@ function toggleTooltip(element) {
     element.classList.toggle('active');
 }
 
-const options = {
+const opcoes= {
     key: 'XBRUBIYWAgEfw9jep7gk7p7vshfRtZ8m', // SUBSTITUA PELA SUA PRÓPRIA CHAVE !!!
 
     // Mantenha as outras configurações iniciais
@@ -15,7 +15,7 @@ const options = {
 };
 
 
-windyInit(options, windyAPI => {
+windyInit(opcoes, windyAPI => {
     const { map, picker, utils, broadcast, storer  } = windyAPI;
     const locationInput = document.getElementById('locationInput');
 

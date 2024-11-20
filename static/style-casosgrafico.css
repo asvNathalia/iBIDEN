@@ -569,3 +569,102 @@ button {
     display: none;
 }
 
+
+/* responsividade */
+/* Menu no modo mobile (oculto por padrão) */
+.navegacao-opcoes-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    background-color: rgb(38, 38, 38);
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+/* Itens do menu em formato de lista */
+.navegacao-opcoes-menu .items-menu {
+    flex-direction: column;
+    padding: 0;
+}
+
+.navegacao-opcoes-menu .items-menu .item {
+    margin: 10px 0;
+}
+
+/* Exibir o menu no modo mobile quando ativado */
+.navegacao-opcoes-menu.show {
+    display: flex;
+}
+
+@media (max-width: 768px) { /* Alvo: telas com largura até 768px */
+    .user-icon {
+        margin-top: 5px; /* Ajusta o espaçamento superior */
+        margin-left: -140px;
+    }
+}
+
+/* Ícone do menu (hambúrguer) */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 30px;
+    display: block;
+    z-index: 1100;
+}
+
+/* Estilo padrão para telas maiores */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+    .navegacao-opcoes-menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        width: auto;
+        padding: 0;
+    }
+    .navegacao-opcoes-menu .items-menu {
+        flex-direction: row;
+    }
+    .navegacao-opcoes-menu .items-menu .item {
+        margin: 0 10px;
+    }
+}
+
+
+/* Responsividade para smartphones */
+@media (max-width: 768px) {
+    .paineis h1 {
+        font-size: 24px;
+    }
+
+    .paineis select {
+        width: 200px;
+        font-size: 14px; /* Ajusta a fonte */
+    }
+
+    .paineis button {
+        font-size: 14px; /* Ajusta o tamanho do botão */
+    }
+
+    .plot-container div {
+        max-width: 90%; /* Ocupa quase toda a largura da tela */
+    }
+
+    .imagem-painel {
+        height: 200px; /* Reduz ainda mais a altura da imagem */
+    }
+}

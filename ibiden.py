@@ -21,12 +21,12 @@ class Conectar:
         try:
             conectar = psycopg2.connect(
                 dbname="ibiden_banco",
-                user="ibiden_banco_user",  # Substitua pelo seu usuário
-                password="xtWgaYBj1mzdfq6t7BTypWa6Y4iE3N9l",  # Substitua pela sua senha
-                host="dpg-cs99o4i3esus739cllo0-a.oregon-postgres.render.com",  # Ou o IP do servidor PostgreSQL
+                user="ibiden_banco_user",  
+                password="xtWgaYBj1mzdfq6t7BTypWa6Y4iE3N9l",  
+                host="dpg-cs99o4i3esus739cllo0-a.oregon-postgres.render.com",  
                 port="5432"  # Porta padrão do PostgreSQL
             )
-            print("Conectado ao banco de dados")  # Mensagem de confirmação
+            print("Conectado ao banco de dados") 
             return conectar
         except Exception as e:
             print("Erro de conexão com o BD: ", e)
@@ -475,6 +475,7 @@ def casosgrafico():
                 showline=False,
                 showgrid=True,
                 showticklabels=True,
+                autorange='reversed', 
                 tickangle=-60,
                 linecolor='rgb(204, 204, 204)',
                 linewidth=0,

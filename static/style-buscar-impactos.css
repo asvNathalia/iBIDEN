@@ -756,7 +756,7 @@ button:hover {
 
 @media (max-width: 768px) { /* Alvo: telas com largura até 768px */
     .user-icon {
-        margin-left: -140px;
+        margin-left: -220px;
         margin-top: 20px;
     }
 }

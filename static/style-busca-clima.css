@@ -830,7 +830,7 @@ button:hover {
 @media (max-width: 768px) { /* Alvo: telas com largura até 768px */
     .user-icon {
         margin-top: 25px; /* Ajusta o espaçamento superior */
-        margin-left: -220px;
+        margin-left: -180px;
     }
 }
 
